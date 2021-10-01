@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FUX-xq-6AF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--发布-->
+        <scene sceneID="1qa-Jz-W0p">
+            <objects>
+                <viewController id="Pzo-jA-vhr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MJl-xX-RYx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3Fp-Cf-gWS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="发布" image="plus.rectangle.fill" catalog="system" id="gVw-GM-GZD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8f-x1-qWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="969"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="kfy-do-lfX">
+            <objects>
+                <viewController id="iT2-ng-Fgn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZk-4h-mBx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1iG-Ii-o5O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="消息" image="message.fill" catalog="system" id="LCh-yH-Wj3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Awl-TS-7ei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="969"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="6wS-sF-rzx">
+            <objects>
+                <viewController id="jZj-NE-waD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5YN-qz-XBK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="owy-af-XnV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="person.fill" catalog="system" id="5Jw-LC-nrZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vam-on-vNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43" y="969"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="Sv6-IU-SIX">
+            <objects>
+                <viewController id="iIA-4b-VS4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sri-PX-FDp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zgB-zl-zq8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="house.fill" catalog="system" id="0o4-gj-mhl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ako-tm-aQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-589"/>
+        </scene>
+        <!--商城-->
+        <scene sceneID="eME-J3-NT2">
+            <objects>
+                <viewController id="nEZ-Ko-pfi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AwO-Su-kIR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tCS-DC-1Y7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="商城" image="cart.fill" catalog="system" id="2yg-zm-wlD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mei-KX-Kq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="129"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LPF-UF-EZk">
+            <objects>
+                <tabBarController id="FUX-xq-6AF" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nBg-sR-FEI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="main"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iIA-4b-VS4" kind="relationship" relationship="viewControllers" id="7yd-aV-vpc"/>
+                        <segue destination="nEZ-Ko-pfi" kind="relationship" relationship="viewControllers" id="yMI-hy-NFy"/>
+                        <segue destination="Pzo-jA-vhr" kind="relationship" relationship="viewControllers" id="IRn-RJ-6eI"/>
+                        <segue destination="iT2-ng-Fgn" kind="relationship" relationship="viewControllers" id="6uO-Pk-zQj"/>
+                        <segue destination="jZj-NE-waD" kind="relationship" relationship="viewControllers" id="tn4-OG-Ocr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8V8-Rh-kOX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+        <namedColor name="main">
+            <color red="0.92900002002716064" green="0.34099999070167542" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

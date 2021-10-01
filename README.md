@@ -1,2 +1,4 @@
 # PinkBook
 PinkBook project
+
+init~
