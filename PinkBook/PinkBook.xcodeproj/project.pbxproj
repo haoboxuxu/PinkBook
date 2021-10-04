@@ -19,11 +19,19 @@
 		D81067152706FF7900AB7BC9 /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81067142706FF7900AB7BC9 /* DiscoveryVC.swift */; };
 		D81067172706FF8400AB7BC9 /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81067162706FF8400AB7BC9 /* NearByVC.swift */; };
 		D81067192707004200AB7BC9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81067182707004200AB7BC9 /* Constants.swift */; };
+		D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A527074E1D00256ED3 /* WaterFallVC.swift */; };
+		D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A72707518400256ED3 /* WaterFallCell.swift */; };
+		D88101B3270980EB00CD9381 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88101B2270980EB00CD9381 /* Extensions.swift */; };
+		D8BD5FD92708A26000D88A95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FD72708A26000D88A95 /* Localizable.strings */; };
+		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
+		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
+		D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE22708AC5000D88A95 /* PostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		342FED596840D058F3056B71 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
 		C96282F8D5359E6393A14A8C /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
+		D804EB3B270846EC0036FE7B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D81066F72705F6D100AB7BC9 /* PinkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81066FA2705F6D100AB7BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81066FC2705F6D100AB7BC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,14 @@
 		D81067142706FF7900AB7BC9 /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		D81067162706FF8400AB7BC9 /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		D81067182707004200AB7BC9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D87C60A527074E1D00256ED3 /* WaterFallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallVC.swift; sourceTree = "<group>"; };
+		D87C60A72707518400256ED3 /* WaterFallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCell.swift; sourceTree = "<group>"; };
+		D88101B2270980EB00CD9381 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D8BD5FD1270848D000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		D8BD5FD82708A26000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
+		D8BD5FE22708AC5000D88A95 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,6 +74,24 @@
 				E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D804EB382708455E0036FE7B /* WaterFall */ = {
+			isa = PBXGroup;
+			children = (
+				D87C60A527074E1D00256ED3 /* WaterFallVC.swift */,
+				D87C60A72707518400256ED3 /* WaterFallCell.swift */,
+			);
+			path = WaterFall;
+			sourceTree = "<group>";
+		};
+		D804EB39270845700036FE7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D81067182707004200AB7BC9 /* Constants.swift */,
+				D88101B2270980EB00CD9381 /* Extensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D81066EE2705F6D100AB7BC9 = {
@@ -84,10 +118,14 @@
 			children = (
 				D81066FA2705F6D100AB7BC9 /* AppDelegate.swift */,
 				D81066FC2705F6D100AB7BC9 /* SceneDelegate.swift */,
-				D810671A2707014300AB7BC9 /* Home */,
 				D81067002705F6D100AB7BC9 /* Main.storyboard */,
-				D81067182707004200AB7BC9 /* Constants.swift */,
+				D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */,
+				D804EB382708455E0036FE7B /* WaterFall */,
+				D810671A2707014300AB7BC9 /* Home */,
+				D804EB39270845700036FE7B /* Common */,
 				D81067032705F6D300AB7BC9 /* Assets.xcassets */,
+				D8BD5FDF2708A5AD00D88A95 /* Resources */,
+				D88101B427098C9800CD9381 /* Demo+PH */,
 				D81067052705F6D300AB7BC9 /* LaunchScreen.storyboard */,
 				D81067082705F6D300AB7BC9 /* Info.plist */,
 			);
@@ -98,11 +136,28 @@
 			isa = PBXGroup;
 			children = (
 				D81067102706F81E00AB7BC9 /* HomeVC.swift */,
-				D81067122706FF6900AB7BC9 /* FollowVC.swift */,
 				D81067142706FF7900AB7BC9 /* DiscoveryVC.swift */,
+				D81067122706FF6900AB7BC9 /* FollowVC.swift */,
 				D81067162706FF8400AB7BC9 /* NearByVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D88101B427098C9800CD9381 /* Demo+PH */ = {
+			isa = PBXGroup;
+			children = (
+				D8BD5FE22708AC5000D88A95 /* PostVC.swift */,
+			);
+			path = "Demo+PH";
+			sourceTree = "<group>";
+		};
+		D8BD5FDF2708A5AD00D88A95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8BD5FD72708A26000D88A95 /* Localizable.strings */,
+				D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DC29C0D4444FD0835AD843A3 /* Pods */ = {
@@ -158,6 +213,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = D81066EE2705F6D100AB7BC9;
 			productRefGroup = D81066F82705F6D100AB7BC9 /* Products */;
@@ -174,6 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BD5FD92708A26000D88A95 /* Localizable.strings in Resources */,
+				D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */,
 				D810670F2705F7A800AB7BC9 /* .gitignore in Resources */,
 				D81067072705F6D300AB7BC9 /* LaunchScreen.storyboard in Resources */,
 				D81067042705F6D300AB7BC9 /* Assets.xcassets in Resources */,
@@ -237,6 +295,11 @@
 				D81067192707004200AB7BC9 /* Constants.swift in Sources */,
 				D81066FB2705F6D100AB7BC9 /* AppDelegate.swift in Sources */,
 				D81066FD2705F6D100AB7BC9 /* SceneDelegate.swift in Sources */,
+				D88101B3270980EB00CD9381 /* Extensions.swift in Sources */,
+				D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */,
+				D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */,
+				D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */,
+				D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +310,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D81067012705F6D100AB7BC9 /* Base */,
+				D8BD5FD1270848D000D88A95 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -255,8 +319,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				D81067062705F6D300AB7BC9 /* Base */,
+				D804EB3B270846EC0036FE7B /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D8BD5FD72708A26000D88A95 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8BD5FD82708A26000D88A95 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8BD5FDD2708A4AA00D88A95 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -266,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -327,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -389,7 +472,7 @@
 				DEVELOPMENT_TEAM = V32BKVPBTJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "小粉书";
+				INFOPLIST_KEY_CFBundleDisplayName = PinkBook;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -421,7 +504,7 @@
 				DEVELOPMENT_TEAM = V32BKVPBTJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "小粉书";
+				INFOPLIST_KEY_CFBundleDisplayName = PinkBook;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

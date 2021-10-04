@@ -7,5 +7,8 @@ target 'PinkBook' do
 
   # Pods for PinkBook
   pod 'XLPagerTabStrip', '~> 9.0'
-
+  pod 'CHTCollectionViewWaterfallLayout/Swift'
+  pod 'YPImagePicker'
+  
+  
 end

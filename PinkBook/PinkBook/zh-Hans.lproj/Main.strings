@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "0o4-gj-mhl"; */
+"0o4-gj-mhl.title" = "主页";
+
+/* Class = "UITabBarItem"; title = "Shopping"; ObjectID = "2yg-zm-wlD"; */
+"2yg-zm-wlD.title" = "购物";
+
+/* Class = "UITabBarItem"; title = "Me"; ObjectID = "5Jw-LC-nrZ"; */
+"5Jw-LC-nrZ.title" = "我";
+
+/* Class = "UITabBarItem"; title = "Message"; ObjectID = "LCh-yH-Wj3"; */
+"LCh-yH-Wj3.title" = "消息";
+
+/* Class = "UILabel"; text = "关注页面占位"; ObjectID = "SC5-OG-geY"; */
+"SC5-OG-geY.text" = "关注页面占位";
+
+/* Class = "UITabBarItem"; title = "Post"; ObjectID = "gVw-GM-GZD"; */
+"gVw-GM-GZD.title" = "发布";
