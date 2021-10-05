@@ -15,6 +15,8 @@ let kWaterFallVCID = "WaterFallVCID"
 let kNoteEditVCID = "NoteEditVCID"
 // MARK: Cell
 let kWaterFallCellID = "WaterFallCellID"
+let kPhotoCellID = "PhotoCellID"
+let kPhotoFooterID = "PhotoFooterID"
 
 // MARK: 业务
 let kChannels = ["推荐", "旅行", "娱乐", "才艺", "美妆", "白富美", "美食", "萌宠"]
