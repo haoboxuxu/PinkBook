@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		852A884AB0AC02C19D29A43A /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */; };
+		D80C8326270C21F1004E515B /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C8325270C21F1004E515B /* NoteEditVC.swift */; };
 		D81066FB2705F6D100AB7BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81066FA2705F6D100AB7BC9 /* AppDelegate.swift */; };
 		D81066FD2705F6D100AB7BC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81066FC2705F6D100AB7BC9 /* SceneDelegate.swift */; };
 		D81067022705F6D100AB7BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81067002705F6D100AB7BC9 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		342FED596840D058F3056B71 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
 		C96282F8D5359E6393A14A8C /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
 		D804EB3B270846EC0036FE7B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D80C8325270C21F1004E515B /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
 		D81066F72705F6D100AB7BC9 /* PinkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81066FA2705F6D100AB7BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D81066FC2705F6D100AB7BC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				D81066FC2705F6D100AB7BC9 /* SceneDelegate.swift */,
 				D81067002705F6D100AB7BC9 /* Main.storyboard */,
 				D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */,
+				D80C8325270C21F1004E515B /* NoteEditVC.swift */,
 				D804EB382708455E0036FE7B /* WaterFall */,
 				D810671A2707014300AB7BC9 /* Home */,
 				D804EB39270845700036FE7B /* Common */,
@@ -294,6 +297,7 @@
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
 				D81067192707004200AB7BC9 /* Constants.swift in Sources */,
 				D81066FB2705F6D100AB7BC9 /* AppDelegate.swift in Sources */,
+				D80C8326270C21F1004E515B /* NoteEditVC.swift in Sources */,
 				D81066FD2705F6D100AB7BC9 /* SceneDelegate.swift in Sources */,
 				D88101B3270980EB00CD9381 /* Extensions.swift in Sources */,
 				D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */,

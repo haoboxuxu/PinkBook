@@ -29,12 +29,12 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.startOnScreen = YPPickerScreen.library
             config.screens = [.library, .video, .photo]
             config.preferredStatusBarStyle = UIStatusBarStyle.default
-            config.maxCameraZoomFactor = 5.0
+            config.maxCameraZoomFactor = kMaxCameraZoomFactor
             
             // MARK: 相册配置
             config.library.defaultMultipleSelection = true
             config.library.maxNumberOfItems = kMaxPhotoCount
-            config.library.spacingBetweenItems = 2.0
+            config.library.spacingBetweenItems = kSpacingBetweenItems
             config.gallery.hidesRemoveButton = false
             
             // MARK: 视频配置
@@ -44,8 +44,19 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             
             picker.didFinishPicking { [unowned picker] items, cancelled in
                 if cancelled {
-                        print("Picker was canceled")
+                    print("Picker was canceled")
+                }
+                
+                for item in items {
+                    switch item {
+                    case let .photo(photo):
+                        print(photo)
+                    case let .video(video):
+                        print(video)
                     }
+                }
+                
+                //picker.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
                 picker.dismiss(animated: true, completion: nil)
             }
             present(picker, animated: true, completion: nil)
