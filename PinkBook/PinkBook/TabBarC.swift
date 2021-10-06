@@ -57,9 +57,9 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
                 }
                 
                 //picker.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
-                picker.dismiss(animated: true, completion: nil)
+                picker.dismiss(animated: true)
             }
-            present(picker, animated: true, completion: nil)
+            present(picker, animated: true)
 
             
             return false

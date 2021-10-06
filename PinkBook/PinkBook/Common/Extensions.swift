@@ -19,6 +19,19 @@ extension UIView {
     }
 }
 
+extension UIViewController {
+    // MARK: 加载框/提示框
+    // MARK: 加载框
+    // MARK: 提示
+    func showTextHUD(_ title: String, _ subTitle: String? = nil) {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .text
+        hud.label.text = title
+        hud.detailsLabel.text = subTitle
+        hud.hide(animated: true, afterDelay: 2.0)
+    }
+}
+
 extension Bundle {
     var appName: String {
         if let appName = localizedInfoDictionary?["CFBundleDisplayName"] as? String {

@@ -25,6 +25,7 @@
 		D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A527074E1D00256ED3 /* WaterFallVC.swift */; };
 		D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A72707518400256ED3 /* WaterFallCell.swift */; };
 		D88101B3270980EB00CD9381 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88101B2270980EB00CD9381 /* Extensions.swift */; };
+		D8869B6A270D9088002A4AE2 /* rickroll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8869B69270D8FF2002A4AE2 /* rickroll.mp4 */; };
 		D8BD5FD92708A26000D88A95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FD72708A26000D88A95 /* Localizable.strings */; };
 		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
 		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
@@ -51,9 +52,11 @@
 		D81067142706FF7900AB7BC9 /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		D81067162706FF8400AB7BC9 /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		D81067182707004200AB7BC9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D8550466270C91E5007A8B25 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D87C60A527074E1D00256ED3 /* WaterFallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallVC.swift; sourceTree = "<group>"; };
 		D87C60A72707518400256ED3 /* WaterFallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCell.swift; sourceTree = "<group>"; };
 		D88101B2270980EB00CD9381 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D8869B69270D8FF2002A4AE2 /* rickroll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rickroll.mp4; sourceTree = "<group>"; };
 		D8BD5FD1270848D000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		D8BD5FD82708A26000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				D88101B427098C9800CD9381 /* Demo+PH */,
 				D81067052705F6D300AB7BC9 /* LaunchScreen.storyboard */,
 				D81067082705F6D300AB7BC9 /* Info.plist */,
+				D8550466270C91E5007A8B25 /* Bridging-Header.h */,
+				D8869B69270D8FF2002A4AE2 /* rickroll.mp4 */,
 			);
 			path = PinkBook;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				D81067072705F6D300AB7BC9 /* LaunchScreen.storyboard in Resources */,
 				D81067042705F6D300AB7BC9 /* Assets.xcassets in Resources */,
 				D81067022705F6D100AB7BC9 /* Main.storyboard in Resources */,
+				D8869B6A270D9088002A4AE2 /* rickroll.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hb.PinkBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PinkBook/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -540,6 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hb.PinkBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PinkBook/Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
