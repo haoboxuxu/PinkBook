@@ -26,3 +26,6 @@ let kMaxPhotoCount = 9
 let kWaterFallPadding: CGFloat = 4
 let kMaxCameraZoomFactor: CGFloat = 5.0
 let kSpacingBetweenItems: CGFloat = 2.0
+
+// MARK: NoteEidtPage
+let kMaxNoteTitleCount = 20

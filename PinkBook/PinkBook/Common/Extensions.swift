@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import MBProgressHUD
+
+extension UITextField {
+    var unwrappedText: String { text ?? "" }
+}
 
 extension UIView {
     @IBInspectable
@@ -29,6 +34,17 @@ extension UIViewController {
         hud.label.text = title
         hud.detailsLabel.text = subTitle
         hud.hide(animated: true, afterDelay: 2.0)
+    }
+    
+    //点击其他地方收起键盘
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false //防止影响其他cell的点击相应被覆盖
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

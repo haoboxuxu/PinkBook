@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-xP-5yw">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="wmY-xP-5yw">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAk-lq-Nq3">
@@ -126,14 +126,87 @@
                                                 <connections>
                                                     <outlet property="dataSource" destination="b3f-V3-e5q" id="wew-fc-oU7"/>
                                                     <outlet property="delegate" destination="b3f-V3-e5q" id="fKp-4r-qfx"/>
+                                                    <outlet property="dragDelegate" destination="b3f-V3-e5q" id="8Il-Sm-haM"/>
+                                                    <outlet property="dropDelegate" destination="b3f-V3-e5q" id="qju-sn-Y2s"/>
                                                 </connections>
                                             </collectionView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Yzy-cF-9nb">
+                                                <rect key="frame" x="16" y="122" width="382" height="227"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zWZ-PL-K6k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ru8-Mc-R0f">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbW-no-58T">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                        <connections>
+                                                                            <action selector="tfDditChanged:" destination="b3f-V3-e5q" eventType="editingChanged" id="S63-bI-4d1"/>
+                                                                            <action selector="tfEditBegin:" destination="b3f-V3-e5q" eventType="editingDidBegin" id="zTt-4m-jHT"/>
+                                                                            <action selector="tfEditEnd:" destination="b3f-V3-e5q" eventType="editingDidEnd" id="aiX-kF-lnS"/>
+                                                                            <action selector="tfEditExit:" destination="b3f-V3-e5q" eventType="editingDidEndOnExit" id="0vz-HL-stG"/>
+                                                                            <outlet property="delegate" destination="b3f-V3-e5q" id="t5p-Xa-sS9"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-up-WmT">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-qy-5va">
+                                                                <rect key="frame" x="0.0" y="37" width="382" height="1"/>
+                                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="HdC-Ef-gKl"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zKL-mK-exw">
+                                                        <rect key="frame" x="0.0" y="80" width="382" height="147"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gea-9i-hIc" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="130" id="DjD-SX-qxx"/>
+                                                                </constraints>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                        <color key="value" systemColor="placeholderTextColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="输入正文"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjK-Cv-nKC">
+                                                                <rect key="frame" x="0.0" y="146" width="382" height="1"/>
+                                                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="WiS-fG-3hh"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="tfb-hA-eTh" firstAttribute="leading" secondItem="SAk-lq-Nq3" secondAttribute="leading" constant="16" id="3k2-CJ-cf8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yzy-cF-9nb" secondAttribute="trailing" constant="16" id="TkB-gb-Ymn"/>
                                             <constraint firstAttribute="trailing" secondItem="tfb-hA-eTh" secondAttribute="trailing" constant="16" id="bRK-8m-Kd1"/>
                                             <constraint firstItem="tfb-hA-eTh" firstAttribute="top" secondItem="SAk-lq-Nq3" secondAttribute="top" constant="16" id="c3f-JV-iRv"/>
+                                            <constraint firstItem="Yzy-cF-9nb" firstAttribute="top" secondItem="tfb-hA-eTh" secondAttribute="bottom" constant="16" id="pKK-Ub-X8J"/>
+                                            <constraint firstItem="Yzy-cF-9nb" firstAttribute="leading" secondItem="SAk-lq-Nq3" secondAttribute="leading" constant="16" id="zvG-5M-9DU"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -160,6 +233,9 @@
                     </view>
                     <connections>
                         <outlet property="photoCollectionView" destination="tfb-hA-eTh" id="f0b-yD-lde"/>
+                        <outlet property="textView" destination="gea-9i-hIc" id="6v7-a9-iwv"/>
+                        <outlet property="titleCountLabel" destination="dzP-up-WmT" id="pjz-Y5-3o9"/>
+                        <outlet property="titleTextField" destination="IbW-no-58T" id="rnR-qN-Oc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTU-ra-Wec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -434,11 +510,23 @@
         <namedColor name="main">
             <color red="0.92900002002716064" green="0.34099999070167542" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
