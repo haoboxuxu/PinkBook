@@ -25,6 +25,7 @@ class NoteEditVC: UIViewController {
     
     var photoCount: Int { photos.count }
     var idVideo: Bool { videoUrl != nil }
+    var textViewIAView: TextViewIAView { textView.inputAccessoryView as! TextViewIAView }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +45,25 @@ class NoteEditVC: UIViewController {
         //hide keyboard
     }
     @IBAction func tfDditChanged(_ sender: Any) {
+        guard titleTextField.markedTextRange == nil else { return }
+        if titleTextField.unwrappedText.count > kMaxNoteTitleCount {
+            titleTextField.text = String(titleTextField.unwrappedText.prefix(kMaxNoteTitleCount))
+            
+            DispatchQueue.main.async {
+                let end = self.titleTextField.endOfDocument
+                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
+            }
+        }
         titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
     
+}
+
+extension NoteEditVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        guard textView.markedTextRange == nil else { return }
+        textViewIAView.currentTextCount = textView.text.count
+    }
 }
 
 extension NoteEditVC: UITextFieldDelegate {
@@ -55,11 +72,11 @@ extension NoteEditVC: UITextFieldDelegate {
     //    return true
     //} //收起键盘
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let isExceed = range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount
-        if isExceed {
-            showTextHUD("标题最多输入\(kMaxNoteTitleCount)个字")
-        }
-        return !isExceed
-    }
+    //func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    //    let isExceed = range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount
+    //    if isExceed {
+    //        showTextHUD("标题最多输入\(kMaxNoteTitleCount)个字")
+    //    }
+    //    return !isExceed
+    //}
 }
