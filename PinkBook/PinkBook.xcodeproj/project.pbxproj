@@ -38,6 +38,7 @@
 		D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E32710310100153FEE /* ChannelVC.swift */; };
 		D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */; };
 		D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E72710380F00153FEE /* Protocols.swift */; };
+		D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E9271079A900153FEE /* POIVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		D8ECC9E32710310100153FEE /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabelVC.swift; sourceTree = "<group>"; };
 		D8ECC9E72710380F00153FEE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		D8ECC9E9271079A900153FEE /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
 		E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				D823FC26270F20E900CD9871 /* TextViewIAView.xib */,
 				D8ECC9E32710310100153FEE /* ChannelVC.swift */,
 				D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */,
+				D8ECC9E9271079A900153FEE /* POIVC.swift */,
 			);
 			path = NodeEdit;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */,
 				D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */,
 				D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */,
+				D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */,
 				D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */,
 				D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */,
 				D80C832A270C493B004E515B /* PhotoFooter.swift in Sources */,
