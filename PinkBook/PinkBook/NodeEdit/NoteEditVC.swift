@@ -13,6 +13,11 @@ class NoteEditVC: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var titleCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var photoCollectionView: UICollectionView!
+    @IBOutlet weak var channelIcon: UIImageView!
+    @IBOutlet weak var channelLabel: UILabel!
+    @IBOutlet weak var channelPlaceholderLabel: UILabel!
+    
     
     var photos = [
         UIImage(named: "ti1")!, UIImage(named: "ti3")!, UIImage(named: "ti2")!,
@@ -21,7 +26,9 @@ class NoteEditVC: UIViewController {
     //var videoUrl: URL = Bundle.main.url(forResource: "rickroll", withExtension: "mp4")!
     var videoUrl: URL?
     
-    @IBOutlet weak var photoCollectionView: UICollectionView!
+    var channel = ""
+    var subChannel = ""
+    
     
     var photoCount: Int { photos.count }
     var idVideo: Bool { videoUrl != nil }
@@ -57,6 +64,25 @@ class NoteEditVC: UIViewController {
         titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let channelVC = segue.destination as? ChannelVC {
+            channelVC.pvDelegate = self
+        }
+    }
+    
+}
+
+// MARK: - 笔记选择话题#后反向传值
+extension NoteEditVC: ChannelVCDelegate {
+    func updateChannel(channel: String, subChannel: String) {
+        self.channel = channel
+        self.subChannel = subChannel
+        
+        channelLabel.text = subChannel
+        channelIcon.tintColor = bluedColor
+        channelLabel.textColor = bluedColor
+        channelPlaceholderLabel.isHidden = true
+    }
 }
 
 extension NoteEditVC: UITextViewDelegate {

@@ -1,22 +1,22 @@
 //
-//  HomeVC.swift
+//  ChannelVC.swift
 //  PinkBook
 //
-//  Created by 徐浩博 on 2021/10/1.
+//  Created by 徐浩博 on 2021/10/8.
 //
 
 import UIKit
 import XLPagerTabStrip
 
-class HomeVC: ButtonBarPagerTabStripViewController {
+class ChannelVC: ButtonBarPagerTabStripViewController {
+    
+    var pvDelegate: ChannelVCDelegate?
 
     override func viewDidLoad() {
-        // MARK: 设置首页最顶部selected bar样式
+        settings.style.selectedBarHeight = 2
         settings.style.selectedBarBackgroundColor = mainColor
-        settings.style.selectedBarHeight = 3
         settings.style.buttonBarItemBackgroundColor = .clear
-        settings.style.buttonBarItemFont = .systemFont(ofSize: 16)
-        settings.style.buttonBarItemLeftRightMargin = 0
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 15)
         
         super.viewDidLoad()
         
@@ -28,15 +28,18 @@ class HomeVC: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = .secondaryLabel
             newCell?.label.textColor = .label
         }
-        
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let followVC = storyboard!.instantiateViewController(identifier: kFollowVCID)
-        let nearByVC = storyboard!.instantiateViewController(identifier: kNearByVCID)
-        let discoveryVC = storyboard!.instantiateViewController(identifier: kDiscoveryVCID)
+        var vcs: [UIViewController] = []
+        for index in kAllSubChannels.indices {
+            let vc = storyboard?.instantiateViewController(identifier: kChannelTabelVCID) as! ChannelTabelVC
+            vc.channel = kChannels[index]
+            vc.subChannels = kAllSubChannels[index]
+            vcs.append(vc)
+        }
         
-        return [discoveryVC, followVC, nearByVC]
+        return vcs
     }
 
 }

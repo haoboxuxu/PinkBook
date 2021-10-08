@@ -35,6 +35,9 @@
 		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
 		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
 		D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE22708AC5000D88A95 /* PostVC.swift */; };
+		D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E32710310100153FEE /* ChannelVC.swift */; };
+		D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */; };
+		D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E72710380F00153FEE /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		D8BD5FE22708AC5000D88A95 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		D8ECC9E32710310100153FEE /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabelVC.swift; sourceTree = "<group>"; };
+		D8ECC9E72710380F00153FEE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +115,7 @@
 			children = (
 				D81067182707004200AB7BC9 /* Constants.swift */,
 				D88101B2270980EB00CD9381 /* Extensions.swift */,
+				D8ECC9E72710380F00153FEE /* Protocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -124,6 +131,8 @@
 				D80C8329270C493B004E515B /* PhotoFooter.swift */,
 				D823FC28270F212E00CD9871 /* TextViewIAView.swift */,
 				D823FC26270F20E900CD9871 /* TextViewIAView.xib */,
+				D8ECC9E32710310100153FEE /* ChannelVC.swift */,
+				D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */,
 			);
 			path = NodeEdit;
 			sourceTree = "<group>";
@@ -330,7 +339,9 @@
 				D80C8328270C2D30004E515B /* PhotoCell.swift in Sources */,
 				D863D914270DCE9F00E38644 /* NoteEditVC-CollectionView.swift in Sources */,
 				D81067152706FF7900AB7BC9 /* DiscoveryVC.swift in Sources */,
+				D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */,
 				D81067172706FF8400AB7BC9 /* NearByVC.swift in Sources */,
+				D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */,
 				D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */,
 				D81067112706F81E00AB7BC9 /* HomeVC.swift in Sources */,
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
@@ -341,6 +352,7 @@
 				D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */,
 				D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */,
 				D88101B3270980EB00CD9381 /* Extensions.swift in Sources */,
+				D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */,
 				D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */,
 				D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */,
 				D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */,
