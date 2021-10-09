@@ -20,6 +20,7 @@ let kWaterFallCellID = "WaterFallCellID"
 let kPhotoCellID = "PhotoCellID"
 let kPhotoFooterID = "PhotoFooterID"
 let kSubChannelCellID = "SubChannelCellID"
+let kPOICellID = "POICellID"
 
 // MARK: Assets
 let mainColor = UIColor(named: "main")!

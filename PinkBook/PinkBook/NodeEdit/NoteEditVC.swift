@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 
 class NoteEditVC: UIViewController {
@@ -17,6 +18,8 @@ class NoteEditVC: UIViewController {
     @IBOutlet weak var channelIcon: UIImageView!
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var channelPlaceholderLabel: UILabel!
+    
+    let locationManager = CLLocationManager()
     
     
     var photos = [
