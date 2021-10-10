@@ -50,3 +50,6 @@ let kAllSubChannels = [
     ["装x西餐厅", "网红店打卡"],
     ["我的猫儿子", "我的猫女儿", "我的兔兔"]
 ]
+
+// MARK: 高德
+let kNoPOIPH = "未知地点"

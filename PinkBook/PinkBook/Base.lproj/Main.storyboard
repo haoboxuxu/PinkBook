@@ -462,7 +462,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="cEX-43-E56" id="mT9-Mh-qc7"/>
-                                            <outlet property="titleLabel" destination="wau-ut-JUu" id="u1w-Ad-DDz"/>
+                                            <outlet property="nameLabel" destination="wau-ut-JUu" id="f6n-GN-la5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -484,6 +484,9 @@
                             <constraint firstItem="NnX-yU-Feg" firstAttribute="leading" secondItem="wm2-BB-Sht" secondAttribute="leading" constant="16" id="yAK-SX-scu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="GAo-4X-jjt" id="TS3-Wc-58b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmy-30-AgD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

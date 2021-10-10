@@ -11,7 +11,7 @@
 #import "MBProgressHUD.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
-//#import <AMapSearchKit/AMapSearchKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
 
 
 #endif /* Bridging_Header_h */

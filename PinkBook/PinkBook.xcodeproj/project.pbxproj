@@ -36,6 +36,8 @@
 		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
 		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
 		D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE22708AC5000D88A95 /* PostVC.swift */; };
+		D8DAC12F27132AFD003F3E8E /* POIVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAC12E27132AFD003F3E8E /* POIVC-Config.swift */; };
+		D8DAC13127132B5B003F3E8E /* POIVC-Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAC13027132B5B003F3E8E /* POIVC-Location.swift */; };
 		D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E32710310100153FEE /* ChannelVC.swift */; };
 		D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */; };
 		D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E72710380F00153FEE /* Protocols.swift */; };
@@ -78,6 +80,8 @@
 		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		D8BD5FE22708AC5000D88A95 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		D8DAC12E27132AFD003F3E8E /* POIVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Config.swift"; sourceTree = "<group>"; };
+		D8DAC13027132B5B003F3E8E /* POIVC-Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Location.swift"; sourceTree = "<group>"; };
 		D8ECC9E32710310100153FEE /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabelVC.swift; sourceTree = "<group>"; };
 		D8ECC9E72710380F00153FEE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				D8ECC9E32710310100153FEE /* ChannelVC.swift */,
 				D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */,
 				D8ECC9E9271079A900153FEE /* POIVC.swift */,
+				D8DAC12E27132AFD003F3E8E /* POIVC-Config.swift */,
+				D8DAC13027132B5B003F3E8E /* POIVC-Location.swift */,
 				D828D83027117D910004E2F0 /* POICell.swift */,
 			);
 			path = NodeEdit;
@@ -350,6 +356,7 @@
 				D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */,
 				D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */,
 				D81067112706F81E00AB7BC9 /* HomeVC.swift in Sources */,
+				D8DAC13127132B5B003F3E8E /* POIVC-Location.swift in Sources */,
 				D828D83127117D910004E2F0 /* POICell.swift in Sources */,
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
 				D81067192707004200AB7BC9 /* Constants.swift in Sources */,
@@ -358,6 +365,7 @@
 				D81066FD2705F6D100AB7BC9 /* SceneDelegate.swift in Sources */,
 				D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */,
 				D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */,
+				D8DAC12F27132AFD003F3E8E /* POIVC-Config.swift in Sources */,
 				D88101B3270980EB00CD9381 /* Extensions.swift in Sources */,
 				D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */,
 				D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */,

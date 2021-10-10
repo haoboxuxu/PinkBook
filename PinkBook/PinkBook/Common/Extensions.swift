@@ -8,6 +8,10 @@
 import UIKit
 import MBProgressHUD
 
+extension Optional where Wrapped == String {
+    var unwrappedText: String { self ?? "" }
+}
+
 extension UITextField {
     var unwrappedText: String { text ?? "" }
 }
@@ -27,6 +31,11 @@ extension UIView {
 extension UIViewController {
     // MARK: 加载框/提示框
     // MARK: 加载框
+    func showLoadHUD(_ title: String? = nil) {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.label.text = title
+    }
+    
     // MARK: 提示
     func showTextHUD(_ title: String, _ subTitle: String? = nil) {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
@@ -34,6 +43,12 @@ extension UIViewController {
         hud.label.text = title
         hud.detailsLabel.text = subTitle
         hud.hide(animated: true, afterDelay: 2.0)
+    }
+    
+    func hideLoadHUD() {
+        DispatchQueue.main.async {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
     }
     
     //点击其他地方收起键盘
