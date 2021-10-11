@@ -16,18 +16,29 @@ class POIVC: UIViewController {
         let request = AMapPOIAroundSearchRequest()
         
         request.location = AMapGeoPoint.location(withLatitude: CGFloat(latitude), longitude: CGFloat(longitude))
-        //request.requireExtension = true
+        //request.types = kPOITypes
+        request.requireExtension = true
         
         return request
     }()
     
-    var pois = [["不显示位置", ""]]//[Array(repeating: "", count: 2)]
+    lazy var keywordsSearchRequest: AMapPOIKeywordsSearchRequest = {
+        let request = AMapPOIKeywordsSearchRequest()
+        request.requireExtension = true
+        return request
+    }()
+    
+    
+    var pois = kPOIsInitArr //[Array(repeating: "", count: 2)]
+    var aroundSearchPois = kPOIsInitArr
     
     var latitude: Double = 0.0
     var longitude: Double = 0.0
+    var keywords = ""
     
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +48,28 @@ class POIVC: UIViewController {
         mapSearch?.delegate = self
     }
 
+}
+
+extension POIVC: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        dismiss(animated: true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            pois = aroundSearchPois
+            tableView.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, !searchText.isBlank else { return }
+        keywords = searchText
+        pois.removeAll()
+        showLoadHUD()
+        keywordsSearchRequest.keywords = keywords
+        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+    }
 }
 
 extension POIVC: AMapSearchDelegate {
@@ -54,10 +87,14 @@ extension POIVC: AMapSearchDelegate {
             
             let poi = [
                 poi.name ?? kNoPOIPH,
-                "\(province.unwrappedText)\(poi.city.unwrappedText)\(address)"
+                "\(province.unwrappedText)\(poi.city.unwrappedText)\(address.unwrappedText)"
             ]
             
             pois.append(poi)
+            
+            if request is AMapPOIAroundSearchRequest {
+                aroundSearchPois.append(poi)
+            }
         }
         
         tableView.reloadData()

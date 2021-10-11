@@ -61,10 +61,11 @@ extension POIVC {
                     "\(province)\(reGeocode.city.unwrappedText)\(reGeocode.district.unwrappedText)\(reGeocode.street.unwrappedText)\(reGeocode.number.unwrappedText)"
                 ]
                 poivcSelf.pois.append(currentPOI)
-            }
-            
-            DispatchQueue.main.async {
-                poivcSelf.tableView.reloadData()
+                poivcSelf.aroundSearchPois.append(currentPOI)
+                
+                DispatchQueue.main.async {
+                    poivcSelf.tableView.reloadData()
+                }
             }
         })
     }
