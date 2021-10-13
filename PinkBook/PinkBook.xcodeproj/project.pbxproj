@@ -25,6 +25,7 @@
 		D823FC27270F20E900CD9871 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D823FC26270F20E900CD9871 /* TextViewIAView.xib */; };
 		D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823FC28270F212E00CD9871 /* TextViewIAView.swift */; };
 		D828D83127117D910004E2F0 /* POICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828D83027117D910004E2F0 /* POICell.swift */; };
+		D84D15322716ADFE00956D30 /* PinkBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D84D15302716ADFE00956D30 /* PinkBook.xcdatamodeld */; };
 		D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863D911270DC1A700E38644 /* NoteEditVC-DragDrop.swift */; };
 		D863D914270DCE9F00E38644 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863D913270DCE9F00E38644 /* NoteEditVC-CollectionView.swift */; };
 		D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A527074E1D00256ED3 /* WaterFallVC.swift */; };
@@ -42,6 +43,7 @@
 		D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */; };
 		D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E72710380F00153FEE /* Protocols.swift */; };
 		D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E9271079A900153FEE /* POIVC.swift */; };
+		D8F1D3B22715738700CC7542 /* POIVC-KeywordsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,7 @@
 		D823FC26270F20E900CD9871 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		D823FC28270F212E00CD9871 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		D828D83027117D910004E2F0 /* POICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POICell.swift; sourceTree = "<group>"; };
+		D84D15312716ADFE00956D30 /* PinkBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PinkBook.xcdatamodel; sourceTree = "<group>"; };
 		D8550466270C91E5007A8B25 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D863D911270DC1A700E38644 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
 		D863D913270DCE9F00E38644 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		D8ECC9E52710322100153FEE /* ChannelTabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTabelVC.swift; sourceTree = "<group>"; };
 		D8ECC9E72710380F00153FEE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D8ECC9E9271079A900153FEE /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
+		D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-KeywordsSearch.swift"; sourceTree = "<group>"; };
 		E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 				D8ECC9E9271079A900153FEE /* POIVC.swift */,
 				D8DAC12E27132AFD003F3E8E /* POIVC-Config.swift */,
 				D8DAC13027132B5B003F3E8E /* POIVC-Location.swift */,
+				D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */,
 				D828D83027117D910004E2F0 /* POICell.swift */,
 			);
 			path = NodeEdit;
@@ -183,6 +188,7 @@
 				D8BD5FDF2708A5AD00D88A95 /* Resources */,
 				D88101B427098C9800CD9381 /* Demo+PH */,
 				D81067052705F6D300AB7BC9 /* LaunchScreen.storyboard */,
+				D84D15302716ADFE00956D30 /* PinkBook.xcdatamodeld */,
 				D81067082705F6D300AB7BC9 /* Info.plist */,
 				D8550466270C91E5007A8B25 /* Bridging-Header.h */,
 				D8869B69270D8FF2002A4AE2 /* rickroll.mp4 */,
@@ -348,11 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F1D3B22715738700CC7542 /* POIVC-KeywordsSearch.swift in Sources */,
 				D80C8328270C2D30004E515B /* PhotoCell.swift in Sources */,
 				D863D914270DCE9F00E38644 /* NoteEditVC-CollectionView.swift in Sources */,
 				D81067152706FF7900AB7BC9 /* DiscoveryVC.swift in Sources */,
 				D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */,
 				D81067172706FF8400AB7BC9 /* NearByVC.swift in Sources */,
+				D84D15322716ADFE00956D30 /* PinkBook.xcdatamodeld in Sources */,
 				D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */,
 				D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */,
 				D81067112706F81E00AB7BC9 /* HomeVC.swift in Sources */,
@@ -623,6 +631,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D84D15302716ADFE00956D30 /* PinkBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D84D15312716ADFE00956D30 /* PinkBook.xcdatamodel */,
+			);
+			currentVersion = D84D15312716ADFE00956D30 /* PinkBook.xcdatamodel */;
+			path = PinkBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D81066EF2705F6D100AB7BC9 /* Project object */;
 }

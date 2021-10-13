@@ -328,12 +328,51 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="rlI-wc-uNu"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ppK-c1-UsC"/>
                             </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="plh-iR-7tA">
+                                <rect key="frame" x="16" y="818" width="382" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnh-7g-arA">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="44"/>
+                                        <color key="tintColor" name="main"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="square.and.arrow.down.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveNote:" destination="b3f-V3-e5q" eventType="touchUpInside" id="71Z-W0-1IZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHX-2P-RFh">
+                                        <rect key="frame" x="59" y="0.0" width="323" height="44"/>
+                                        <color key="backgroundColor" name="main"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="发布笔记">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="hbRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="postNote:" destination="b3f-V3-e5q" eventType="touchUpInside" id="pvW-cO-wwz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9DD-2A-BRF"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="itc-Wz-ndv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wmY-xP-5yw" firstAttribute="leading" secondItem="itc-Wz-ndv" secondAttribute="leading" id="7rw-V2-FFl"/>
+                            <constraint firstItem="itc-Wz-ndv" firstAttribute="trailing" secondItem="plh-iR-7tA" secondAttribute="trailing" constant="16" id="K7K-Rf-688"/>
                             <constraint firstItem="wmY-xP-5yw" firstAttribute="top" secondItem="itc-Wz-ndv" secondAttribute="top" id="cTj-Lf-CXD"/>
+                            <constraint firstItem="plh-iR-7tA" firstAttribute="leading" secondItem="itc-Wz-ndv" secondAttribute="leading" constant="16" id="e7h-FA-eAc"/>
+                            <constraint firstItem="itc-Wz-ndv" firstAttribute="bottom" secondItem="plh-iR-7tA" secondAttribute="bottom" id="gQe-kH-6fI"/>
                             <constraint firstAttribute="bottom" secondItem="wmY-xP-5yw" secondAttribute="bottom" id="n0z-If-cKh"/>
                             <constraint firstItem="wmY-xP-5yw" firstAttribute="trailing" secondItem="itc-Wz-ndv" secondAttribute="trailing" id="olg-ke-W7k"/>
                         </constraints>
@@ -343,6 +382,8 @@
                         <outlet property="channelLabel" destination="6at-k8-TSx" id="fLe-yg-940"/>
                         <outlet property="channelPlaceholderLabel" destination="sWy-im-VNB" id="8TI-eo-wwE"/>
                         <outlet property="photoCollectionView" destination="tfb-hA-eTh" id="f0b-yD-lde"/>
+                        <outlet property="poiNameIcon" destination="2td-F5-H9Z" id="0aM-NX-AYq"/>
+                        <outlet property="poiNameLabel" destination="1He-Hg-yN7" id="VSB-pk-IUH"/>
                         <outlet property="textView" destination="gea-9i-hIc" id="6v7-a9-iwv"/>
                         <outlet property="titleCountLabel" destination="dzP-up-WmT" id="pjz-Y5-3o9"/>
                         <outlet property="titleTextField" destination="IbW-no-58T" id="rnR-qN-Oc5"/>
@@ -433,7 +474,7 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="784"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICellID" id="Sva-qS-bM1" customClass="POICell" customModule="PinkBook" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="POICellID" id="Sva-qS-bM1" customClass="POICell" customModule="PinkBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sva-qS-bM1" id="2vN-hi-MaR">
@@ -463,6 +504,7 @@
                                                 <constraint firstItem="Vw4-me-ZFD" firstAttribute="leading" secondItem="2vN-hi-MaR" secondAttribute="leadingMargin" id="osq-1A-XDi"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" name="main"/>
                                         <connections>
                                             <outlet property="addressLabel" destination="cEX-43-E56" id="mT9-Mh-qc7"/>
                                             <outlet property="nameLabel" destination="wau-ut-JUu" id="f6n-GN-la5"/>
@@ -796,6 +838,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <image name="ti9" width="886" height="886"/>
         <namedColor name="main">
             <color red="0.92900002002716064" green="0.34099999070167542" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

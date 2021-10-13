@@ -18,6 +18,8 @@ class NoteEditVC: UIViewController {
     @IBOutlet weak var channelIcon: UIImageView!
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var channelPlaceholderLabel: UILabel!
+    @IBOutlet weak var poiNameIcon: UIImageView!
+    @IBOutlet weak var poiNameLabel: UILabel!
     
     let locationManager = CLLocationManager()
     
@@ -31,7 +33,7 @@ class NoteEditVC: UIViewController {
     
     var channel = ""
     var subChannel = ""
-    
+    var poiName = ""
     
     var photoCount: Int { photos.count }
     var idVideo: Bool { videoUrl != nil }
@@ -40,6 +42,7 @@ class NoteEditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
+        print("NSHomeDirectory\(NSHomeDirectory())")
     }
 
     @IBAction func tfEditBegin(_ sender: Any) {
@@ -67,9 +70,40 @@ class NoteEditVC: UIViewController {
         titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
     
+    
+    @IBAction func saveNote(_ sender: Any) {
+        
+        guard textViewIAView.currentTextCount <= kMaxNoteTextCount else {
+            showTextHUD("正文最多输入\(kMaxNoteTextCount)个字")
+            return
+        }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let draftNote = DraftNote(context: context)
+        
+        draftNote.title = titleTextField.exactText
+        draftNote.text = textView.exactText
+        draftNote.channel = channel
+        draftNote.subChannel = subChannel
+        draftNote.poiName = poiName
+        draftNote.updatedAt = Date()
+        
+        appDelegate.saveContext()
+    }
+    
+    @IBAction func postNote(_ sender: Any) {
+        
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let channelVC = segue.destination as? ChannelVC {
+            view.endEditing(true)
             channelVC.pvDelegate = self
+        } else if let poiVC = segue.destination as? POIVC {
+            poiVC.delegate = self
+            poiVC.poiName = poiName
         }
     }
     
@@ -92,6 +126,22 @@ extension NoteEditVC: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         guard textView.markedTextRange == nil else { return }
         textViewIAView.currentTextCount = textView.text.count
+    }
+}
+
+extension NoteEditVC: POIVCDelegate {
+    func updatePOIBName(_ poiName: String) {
+        if poiName == kPOIsInitArr[0][0] {
+            self.poiName = ""
+            poiNameLabel.text = "添加地点"
+            poiNameLabel.textColor = .label
+            poiNameIcon.tintColor = .label
+        } else {
+            self.poiName = poiName
+            poiNameLabel.text = self.poiName
+            poiNameLabel.textColor = bluedColor
+            poiNameIcon.tintColor = bluedColor
+        }
     }
 }
 

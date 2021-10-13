@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="21A5543b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DraftNote" representedClassName="DraftNote" syncable="YES" codeGenerationType="class">
+        <attribute name="channel" attributeType="String" defaultValueString=""/>
+        <attribute name="poiName" attributeType="String" defaultValueString=""/>
+        <attribute name="subChannel" attributeType="String" defaultValueString=""/>
+        <attribute name="text" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="updatedAt" attributeType="Date" defaultDateTimeInterval="655801620" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="DraftNote" positionX="-63" positionY="-18" width="128" height="119"/>
+    </elements>
+</model>

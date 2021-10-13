@@ -6,27 +6,37 @@
 //
 
 import UIKit
+import MJRefresh
 
 
 class POIVC: UIViewController {
     
+    // poi反向传数
+    var delegate: POIVCDelegate?
+    // poi正向传数
+    var poiName = ""
+    
     lazy var locationManager = AMapLocationManager()
     lazy var mapSearch = AMapSearchAPI()
+    
     lazy var aroundSearchRequest: AMapPOIAroundSearchRequest = {
         let request = AMapPOIAroundSearchRequest()
         
         request.location = AMapGeoPoint.location(withLatitude: CGFloat(latitude), longitude: CGFloat(longitude))
         //request.types = kPOITypes
         request.requireExtension = true
-        
+        request.offset = kPOIoffset
         return request
     }()
     
     lazy var keywordsSearchRequest: AMapPOIKeywordsSearchRequest = {
         let request = AMapPOIKeywordsSearchRequest()
         request.requireExtension = true
+        request.offset = kPOIoffset
         return request
     }()
+    
+    lazy var footer = MJRefreshAutoNormalFooter()
     
     
     var pois = kPOIsInitArr //[Array(repeating: "", count: 2)]
@@ -35,6 +45,9 @@ class POIVC: UIViewController {
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var keywords = ""
+    var currentAroundPage = 1
+    var currentKeywordPage = 1
+    var pagesCount = 1
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -44,62 +57,11 @@ class POIVC: UIViewController {
         super.viewDidLoad()
         config()
         requestLocation()
-        
-        mapSearch?.delegate = self
     }
 
 }
 
-extension POIVC: UISearchBarDelegate {
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        dismiss(animated: true)
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            pois = aroundSearchPois
-            tableView.reloadData()
-        }
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text, !searchText.isBlank else { return }
-        keywords = searchText
-        pois.removeAll()
-        showLoadHUD()
-        keywordsSearchRequest.keywords = keywords
-        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
-    }
-}
 
-extension POIVC: AMapSearchDelegate {
-    func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
-        
-        hideLoadHUD()
-        
-        if response.count == 0 {
-            return
-        }
-        
-        for poi in response.pois {
-            let province = poi.province == poi.city ? "" : poi.province
-            let address = poi.district == poi.address ? "" : poi.address
-            
-            let poi = [
-                poi.name ?? kNoPOIPH,
-                "\(province.unwrappedText)\(poi.city.unwrappedText)\(address.unwrappedText)"
-            ]
-            
-            pois.append(poi)
-            
-            if request is AMapPOIAroundSearchRequest {
-                aroundSearchPois.append(poi)
-            }
-        }
-        
-        tableView.reloadData()
-    }
-}
 
 extension POIVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,10 +72,33 @@ extension POIVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: kPOICellID, for: indexPath) as! POICell
         let poi = pois[indexPath.row]
         cell.poi = poi
+        
+        //正向已选地址
+        if poi[0] == poiName {
+            cell.accessoryType = .checkmark
+        }
+        
         return cell
     }
 }
 
 extension POIVC: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        cell.accessoryType = .checkmark
+        delegate?.updatePOIBName(pois[indexPath.row][0])
+        dismiss(animated: true)
+    }
+}
+
+
+extension POIVC {
+    func endRefreshing(_ currentPage: Int) {
+        //滑到底部了
+        if currentPage < pagesCount {
+            footer.endRefreshing()
+        } else {
+            footer.endRefreshingWithNoMoreData()
+        }
+    }
 }

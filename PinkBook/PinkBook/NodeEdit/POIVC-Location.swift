@@ -17,7 +17,7 @@ extension POIVC {
                 
                 if error.code == AMapLocationErrorCode.locateFailed.rawValue {
                     //定位错误：此时location和regeocode没有返回值，不进行annotation的添加
-                    print("定位错误:{\(error.code) - \(error.localizedDescription)};")
+                    //print("定位错误:{\(error.code) - \(error.localizedDescription)};")
                     self?.hideLoadHUD()
                     return
                 }
@@ -29,7 +29,7 @@ extension POIVC {
                     || error.code == AMapLocationErrorCode.cannotConnectToHost.rawValue {
                     
                     //逆地理错误：在带逆地理的单次定位中，逆地理过程可能发生错误，此时location有返回值，regeocode无返回值，进行annotation的添加
-                    print("逆地理错误:{\(error.code) - \(error.localizedDescription)};")
+                    //print("逆地理错误:{\(error.code) - \(error.localizedDescription)};")
                     self?.hideLoadHUD()
                     return
                 } else {
@@ -40,16 +40,16 @@ extension POIVC {
             guard let poivcSelf = self else { return }
             
             if let location = location {
-                print("location:", location)
                 poivcSelf.latitude = location.coordinate.latitude
                 poivcSelf.longitude = location.coordinate.longitude
                 
-                //检索周边POI
-                poivcSelf.mapSearch?.aMapPOIAroundSearch(poivcSelf.aroundSearchRequest)
+                // 上拉刷poi
+                poivcSelf.setAroundSearchFooter()
+                // 检索周边POI
+                poivcSelf.makeAroundSearch()
             }
             
             if let reGeocode = reGeocode {
-                print("reGeocode:", reGeocode)
                 
                 guard let formattedAddress = reGeocode.formattedAddress, !formattedAddress.isEmpty else { return }
                 
@@ -71,3 +71,25 @@ extension POIVC {
     }
 }
 
+// poi search请求
+extension POIVC {
+    private func makeAroundSearch(_ page: Int = 1) {
+        aroundSearchRequest.page = page
+        mapSearch?.aMapPOIAroundSearch(aroundSearchRequest)
+    }
+    
+    func setAroundSearchFooter() {
+        footer.resetNoMoreData()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(aroundSearchAutoRefresh))
+    }
+}
+
+
+// 上滑监听
+extension POIVC {
+    @objc private func aroundSearchAutoRefresh() {
+        currentAroundPage += 1
+        makeAroundSearch(currentAroundPage)
+        endRefreshing(currentAroundPage)
+    }
+}
