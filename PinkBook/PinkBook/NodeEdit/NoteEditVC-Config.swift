@@ -31,6 +31,9 @@ extension NoteEditVC {
         textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
         
         locationManager.requestWhenInUseAuthorization()
+        
+        
+        print("NSHomeDirectory\(NSHomeDirectory())")
     }
 }
 

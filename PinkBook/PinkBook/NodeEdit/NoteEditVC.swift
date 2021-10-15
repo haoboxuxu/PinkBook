@@ -28,7 +28,7 @@ class NoteEditVC: UIViewController {
         UIImage(named: "ti1")!, UIImage(named: "ti3")!, UIImage(named: "ti2")!,
     ]
     
-    //var videoUrl: URL = Bundle.main.url(forResource: "rickroll", withExtension: "mp4")!
+    //var videoUrl: URL? = Bundle.main.url(forResource: "rickroll", withExtension: "mp4")!
     var videoUrl: URL?
     
     var channel = ""
@@ -36,13 +36,12 @@ class NoteEditVC: UIViewController {
     var poiName = ""
     
     var photoCount: Int { photos.count }
-    var idVideo: Bool { videoUrl != nil }
+    var isVideo: Bool { videoUrl != nil }
     var textViewIAView: TextViewIAView { textView.inputAccessoryView as! TextViewIAView }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
-        print("NSHomeDirectory\(NSHomeDirectory())")
     }
 
     @IBAction func tfEditBegin(_ sender: Any) {
@@ -78,16 +77,31 @@ class NoteEditVC: UIViewController {
             return
         }
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
         let draftNote = DraftNote(context: context)
         
+        if isVideo {
+            draftNote.video = try? Data(contentsOf: videoUrl!)
+        }
+        
+        draftNote.coverPhoto = photos[0].jpeg(.high)
+        
+        var photos: [Data] = []
+        for photo in self.photos {
+            if let pngData = photo.pngData() {
+                photos.append(pngData)
+            }
+        }
+        
+        draftNote.photos = try? JSONEncoder().encode(photos)
+        
+        draftNote.isVideo = isVideo
         draftNote.title = titleTextField.exactText
         draftNote.text = textView.exactText
         draftNote.channel = channel
         draftNote.subChannel = subChannel
         draftNote.poiName = poiName
         draftNote.updatedAt = Date()
+        
         
         appDelegate.saveContext()
     }

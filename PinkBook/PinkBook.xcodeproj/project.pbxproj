@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		852A884AB0AC02C19D29A43A /* Pods_PinkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */; };
+		D8031CF22719703700405232 /* WaterFallVC-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8031CF12719703700405232 /* WaterFallVC-DataSource.swift */; };
+		D8031CF4271973B900405232 /* WaterFallVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8031CF3271973B900405232 /* WaterFallVC-Delegate.swift */; };
 		D80C8326270C21F1004E515B /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C8325270C21F1004E515B /* NoteEditVC.swift */; };
 		D80C8328270C2D30004E515B /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C8327270C2D30004E515B /* PhotoCell.swift */; };
 		D80C832A270C493B004E515B /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C8329270C493B004E515B /* PhotoFooter.swift */; };
@@ -37,6 +39,8 @@
 		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
 		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
 		D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE22708AC5000D88A95 /* PostVC.swift */; };
+		D8D70D64271813AC000751E6 /* WaterFallVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D70D63271813AC000751E6 /* WaterFallVC-LoadData.swift */; };
+		D8D70D66271818FA000751E6 /* WaterFallVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D70D65271818FA000751E6 /* WaterFallVC-Config.swift */; };
 		D8DAC12F27132AFD003F3E8E /* POIVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAC12E27132AFD003F3E8E /* POIVC-Config.swift */; };
 		D8DAC13127132B5B003F3E8E /* POIVC-Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAC13027132B5B003F3E8E /* POIVC-Location.swift */; };
 		D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E32710310100153FEE /* ChannelVC.swift */; };
@@ -44,11 +48,14 @@
 		D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E72710380F00153FEE /* Protocols.swift */; };
 		D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E9271079A900153FEE /* POIVC.swift */; };
 		D8F1D3B22715738700CC7542 /* POIVC-KeywordsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */; };
+		D8F5C052271715B80004BAB1 /* DraftNoteWaterFallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F5C051271715B80004BAB1 /* DraftNoteWaterFallCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		342FED596840D058F3056B71 /* Pods-PinkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.release.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.release.xcconfig"; sourceTree = "<group>"; };
 		C96282F8D5359E6393A14A8C /* Pods-PinkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinkBook.debug.xcconfig"; path = "Target Support Files/Pods-PinkBook/Pods-PinkBook.debug.xcconfig"; sourceTree = "<group>"; };
+		D8031CF12719703700405232 /* WaterFallVC-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterFallVC-DataSource.swift"; sourceTree = "<group>"; };
+		D8031CF3271973B900405232 /* WaterFallVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterFallVC-Delegate.swift"; sourceTree = "<group>"; };
 		D804EB3B270846EC0036FE7B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D80C8325270C21F1004E515B /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
 		D80C8327270C2D30004E515B /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -83,6 +90,8 @@
 		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		D8BD5FE22708AC5000D88A95 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		D8D70D63271813AC000751E6 /* WaterFallVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterFallVC-LoadData.swift"; sourceTree = "<group>"; };
+		D8D70D65271818FA000751E6 /* WaterFallVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterFallVC-Config.swift"; sourceTree = "<group>"; };
 		D8DAC12E27132AFD003F3E8E /* POIVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Config.swift"; sourceTree = "<group>"; };
 		D8DAC13027132B5B003F3E8E /* POIVC-Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Location.swift"; sourceTree = "<group>"; };
 		D8ECC9E32710310100153FEE /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
@@ -90,6 +99,7 @@
 		D8ECC9E72710380F00153FEE /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D8ECC9E9271079A900153FEE /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
 		D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-KeywordsSearch.swift"; sourceTree = "<group>"; };
+		D8F5C051271715B80004BAB1 /* DraftNoteWaterFallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftNoteWaterFallCell.swift; sourceTree = "<group>"; };
 		E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,7 +127,12 @@
 			isa = PBXGroup;
 			children = (
 				D87C60A527074E1D00256ED3 /* WaterFallVC.swift */,
+				D8D70D65271818FA000751E6 /* WaterFallVC-Config.swift */,
+				D8D70D63271813AC000751E6 /* WaterFallVC-LoadData.swift */,
+				D8031CF12719703700405232 /* WaterFallVC-DataSource.swift */,
+				D8031CF3271973B900405232 /* WaterFallVC-Delegate.swift */,
 				D87C60A72707518400256ED3 /* WaterFallCell.swift */,
+				D8F5C051271715B80004BAB1 /* DraftNoteWaterFallCell.swift */,
 			);
 			path = WaterFall;
 			sourceTree = "<group>";
@@ -364,6 +379,7 @@
 				D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */,
 				D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */,
 				D81067112706F81E00AB7BC9 /* HomeVC.swift in Sources */,
+				D8031CF22719703700405232 /* WaterFallVC-DataSource.swift in Sources */,
 				D8DAC13127132B5B003F3E8E /* POIVC-Location.swift in Sources */,
 				D828D83127117D910004E2F0 /* POICell.swift in Sources */,
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
@@ -375,13 +391,17 @@
 				D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */,
 				D8DAC12F27132AFD003F3E8E /* POIVC-Config.swift in Sources */,
 				D88101B3270980EB00CD9381 /* Extensions.swift in Sources */,
+				D8D70D64271813AC000751E6 /* WaterFallVC-LoadData.swift in Sources */,
+				D8D70D66271818FA000751E6 /* WaterFallVC-Config.swift in Sources */,
 				D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */,
 				D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */,
 				D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */,
 				D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */,
+				D8031CF4271973B900405232 /* WaterFallVC-Delegate.swift in Sources */,
 				D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */,
 				D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */,
 				D80C832A270C493B004E515B /* PhotoFooter.swift in Sources */,
+				D8F5C052271715B80004BAB1 /* DraftNoteWaterFallCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

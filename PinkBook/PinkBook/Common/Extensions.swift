@@ -7,6 +7,7 @@
 
 import UIKit
 import MBProgressHUD
+import DateToolsSwift
 
 extension String {
     var isBlank: Bool {
@@ -16,6 +17,52 @@ extension String {
 
 extension Optional where Wrapped == String {
     var unwrappedText: String { self ?? "" }
+}
+
+extension Date {
+    var formattedDate: String {
+        let currentYear = Date().year
+        if self.year == currentYear {
+            if isToday {
+                if minutesAgo > 10 {
+                    return "今天\(format(with: "HH:mm"))"
+                } else {
+                    return timeAgoSinceNow
+                }
+            } else if isYesterday {
+                return "昨天\(format(with: "HH:mm"))"
+            } else {
+                return format(with: "MM:dd")
+            }
+        } else if year < currentYear {
+            return format(with: "yyyy-MM-dd")
+        } else {
+            return "未来闪电侠"
+        }
+    }
+}
+
+extension UIImage {
+    
+    convenience init?(_ data: Data?) {
+        if let unwrappedData = data {
+            self.init(data: unwrappedData)
+        } else {
+            return nil
+        }
+    }
+    
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+    
+    func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
+        jpegData(compressionQuality: jpegQuality.rawValue)
+    }
 }
 
 extension UITextField {

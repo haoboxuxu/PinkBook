@@ -37,7 +37,7 @@ extension NoteEditVC: UICollectionViewDataSource {
 extension NoteEditVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if idVideo {
+        if isVideo {
             let playerVC = AVPlayerViewController()
             playerVC.player = AVPlayer(url: videoUrl!)
             present(playerVC, animated: true) {

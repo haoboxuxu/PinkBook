@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3f-V3-e5q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tKE-sj-FFL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -756,7 +756,7 @@
                         <collectionViewLayout key="collectionViewLayout" id="RU6-ra-Hvm" customClass="CHTCollectionViewWaterfallLayout" customModule="CHTCollectionViewWaterfallLayout"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterFallCellID" id="Gpb-Jq-Swb" customClass="WaterFallCell" customModule="PinkBook" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="257"/>
+                                <rect key="frame" x="0.0" y="11.5" width="190" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qed-xr-0a2">
                                     <rect key="frame" x="0.0" y="0.0" width="190" height="257"/>
@@ -776,6 +776,80 @@
                                 <size key="customSize" width="190" height="257"/>
                                 <connections>
                                     <outlet property="imageView" destination="f0R-74-B9K" id="SRz-SA-IGZ"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DraftNoteWaterFallCellID" id="uTX-gg-U0y" customClass="DraftNoteWaterFallCell" customModule="PinkBook" customModuleProvider="target">
+                                <rect key="frame" x="200" y="0.0" width="173" height="280"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N0p-A9-SJ7">
+                                    <rect key="frame" x="0.0" y="0.0" width="173" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rjt-kI-Vyu">
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="193"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zLm-29-SYh">
+                                            <rect key="frame" x="16" y="209" width="141" height="55"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-jj-jZs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Z5R-KL-q7s">
+                                                    <rect key="frame" x="0.0" y="26.5" width="141" height="28.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-1-1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkT-ma-dbh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40.5" height="28.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtj-2S-W87">
+                                                            <rect key="frame" x="92" y="0.0" width="49" height="28.5"/>
+                                                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="删除">
+                                                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NLE-UX-KAV">
+                                            <rect key="frame" x="133" y="16.5" width="24" height="23"/>
+                                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="DkY-KV-6OY"/>
+                                                <constraint firstAttribute="height" constant="24" id="iN4-dZ-jvn"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zLm-29-SYh" firstAttribute="leading" secondItem="N0p-A9-SJ7" secondAttribute="leading" constant="16" id="8Y4-JB-uJk"/>
+                                        <constraint firstItem="Rjt-kI-Vyu" firstAttribute="leading" secondItem="N0p-A9-SJ7" secondAttribute="leading" id="Bd4-Rm-MCm"/>
+                                        <constraint firstAttribute="trailing" secondItem="zLm-29-SYh" secondAttribute="trailing" constant="16" id="J8U-Yu-U5R"/>
+                                        <constraint firstItem="Rjt-kI-Vyu" firstAttribute="top" secondItem="N0p-A9-SJ7" secondAttribute="top" id="JDd-HY-1C0"/>
+                                        <constraint firstItem="zLm-29-SYh" firstAttribute="top" secondItem="Rjt-kI-Vyu" secondAttribute="bottom" constant="16" id="aSb-Gj-xPs"/>
+                                        <constraint firstAttribute="trailing" secondItem="NLE-UX-KAV" secondAttribute="trailing" constant="16" id="da0-qs-5lq"/>
+                                        <constraint firstItem="NLE-UX-KAV" firstAttribute="top" secondItem="N0p-A9-SJ7" secondAttribute="top" constant="16" id="eSV-0Z-Vfr"/>
+                                        <constraint firstAttribute="bottom" secondItem="zLm-29-SYh" secondAttribute="bottom" constant="16" id="mMb-zy-mjm"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rjt-kI-Vyu" secondAttribute="trailing" id="yb4-76-Qxv"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="173" height="280"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hbRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dateLabel" destination="gkT-ma-dbh" id="8bu-P2-TTM"/>
+                                    <outlet property="deleteBtn" destination="qtj-2S-W87" id="kuz-bA-6s2"/>
+                                    <outlet property="imageview" destination="Rjt-kI-Vyu" id="mIF-mK-YJP"/>
+                                    <outlet property="isVideoImage" destination="NLE-UX-KAV" id="bJS-3q-ZEW"/>
+                                    <outlet property="titleLabel" destination="VAp-jj-jZs" id="gt2-1b-rVt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -836,6 +910,7 @@
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="number.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
