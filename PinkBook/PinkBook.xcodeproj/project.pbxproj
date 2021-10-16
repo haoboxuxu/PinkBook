@@ -30,6 +30,8 @@
 		D84D15322716ADFE00956D30 /* PinkBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D84D15302716ADFE00956D30 /* PinkBook.xcdatamodeld */; };
 		D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863D911270DC1A700E38644 /* NoteEditVC-DragDrop.swift */; };
 		D863D914270DCE9F00E38644 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D863D913270DCE9F00E38644 /* NoteEditVC-CollectionView.swift */; };
+		D87C20FE271B20B800E1C27E /* NoteEditVC-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C20FD271B20B800E1C27E /* NoteEditVC-Helper.swift */; };
+		D87C2100271B217700E1C27E /* NoteEditVC-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C20FF271B217700E1C27E /* NoteEditVC-UI.swift */; };
 		D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A527074E1D00256ED3 /* WaterFallVC.swift */; };
 		D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A72707518400256ED3 /* WaterFallCell.swift */; };
 		D88101B3270980EB00CD9381 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88101B2270980EB00CD9381 /* Extensions.swift */; };
@@ -80,6 +82,8 @@
 		D8550466270C91E5007A8B25 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D863D911270DC1A700E38644 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
 		D863D913270DCE9F00E38644 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
+		D87C20FD271B20B800E1C27E /* NoteEditVC-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Helper.swift"; sourceTree = "<group>"; };
+		D87C20FF271B217700E1C27E /* NoteEditVC-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-UI.swift"; sourceTree = "<group>"; };
 		D87C60A527074E1D00256ED3 /* WaterFallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallVC.swift; sourceTree = "<group>"; };
 		D87C60A72707518400256ED3 /* WaterFallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCell.swift; sourceTree = "<group>"; };
 		D88101B2270980EB00CD9381 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				D80C8325270C21F1004E515B /* NoteEditVC.swift */,
 				D8B12389270EE8D9005D706C /* NoteEditVC-Config.swift */,
 				D863D911270DC1A700E38644 /* NoteEditVC-DragDrop.swift */,
+				D87C20FD271B20B800E1C27E /* NoteEditVC-Helper.swift */,
+				D87C20FF271B217700E1C27E /* NoteEditVC-UI.swift */,
 				D863D913270DCE9F00E38644 /* NoteEditVC-CollectionView.swift */,
 				D80C8327270C2D30004E515B /* PhotoCell.swift */,
 				D80C8329270C493B004E515B /* PhotoFooter.swift */,
@@ -371,6 +377,7 @@
 			files = (
 				D8F1D3B22715738700CC7542 /* POIVC-KeywordsSearch.swift in Sources */,
 				D80C8328270C2D30004E515B /* PhotoCell.swift in Sources */,
+				D87C20FE271B20B800E1C27E /* NoteEditVC-Helper.swift in Sources */,
 				D863D914270DCE9F00E38644 /* NoteEditVC-CollectionView.swift in Sources */,
 				D81067152706FF7900AB7BC9 /* DiscoveryVC.swift in Sources */,
 				D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */,
@@ -385,6 +392,7 @@
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
 				D81067192707004200AB7BC9 /* Constants.swift in Sources */,
 				D81066FB2705F6D100AB7BC9 /* AppDelegate.swift in Sources */,
+				D87C2100271B217700E1C27E /* NoteEditVC-UI.swift in Sources */,
 				D80C8326270C21F1004E515B /* NoteEditVC.swift in Sources */,
 				D81066FD2705F6D100AB7BC9 /* SceneDelegate.swift in Sources */,
 				D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */,

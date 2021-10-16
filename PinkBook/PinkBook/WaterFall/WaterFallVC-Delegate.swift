@@ -16,6 +16,14 @@ extension WaterFallVC {
                 
                 let photos = photosDataArr.map { UIImage($0) ?? imagePH }
                 
+                let videoUrl = FileManager.default.save(draftNote.video, to: "video", as: "\(UUID().uuidString).mp4")
+                
+                let noteEditVC = storyboard?.instantiateViewController(identifier: kNoteEditVCID) as! NoteEditVC
+                noteEditVC.draftNote = draftNote
+                noteEditVC.photos = photos
+                noteEditVC.videoUrl = videoUrl
+                
+                navigationController?.pushViewController(noteEditVC, animated: true)
                 
             } else {
                 showTextHUD("加载笔记草稿失败")

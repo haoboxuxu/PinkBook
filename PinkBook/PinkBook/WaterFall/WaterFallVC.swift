@@ -25,8 +25,6 @@ class WaterFallVC: UICollectionViewController {
         getDraftNotes()
     }
 
-    
-
 }
 
 // MARK: - CHTCollectionViewDelegateWaterfallLayout

@@ -11,6 +11,8 @@ import CoreLocation
 
 class NoteEditVC: UIViewController {
     
+    var draftNote: DraftNote?
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var titleCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
@@ -42,6 +44,7 @@ class NoteEditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
+        setUI()
     }
 
     @IBAction func tfEditBegin(_ sender: Any) {
@@ -72,10 +75,7 @@ class NoteEditVC: UIViewController {
     
     @IBAction func saveNote(_ sender: Any) {
         
-        guard textViewIAView.currentTextCount <= kMaxNoteTextCount else {
-            showTextHUD("正文最多输入\(kMaxNoteTextCount)个字")
-            return
-        }
+        validateNote()
         
         let draftNote = DraftNote(context: context)
         
@@ -107,7 +107,7 @@ class NoteEditVC: UIViewController {
     }
     
     @IBAction func postNote(_ sender: Any) {
-        
+        validateNote()
     }
     
     
@@ -128,11 +128,7 @@ extension NoteEditVC: ChannelVCDelegate {
     func updateChannel(channel: String, subChannel: String) {
         self.channel = channel
         self.subChannel = subChannel
-        
-        channelLabel.text = subChannel
-        channelIcon.tintColor = bluedColor
-        channelLabel.textColor = bluedColor
-        channelPlaceholderLabel.isHidden = true
+        updateChannelUI()
     }
 }
 
@@ -147,15 +143,10 @@ extension NoteEditVC: POIVCDelegate {
     func updatePOIBName(_ poiName: String) {
         if poiName == kPOIsInitArr[0][0] {
             self.poiName = ""
-            poiNameLabel.text = "添加地点"
-            poiNameLabel.textColor = .label
-            poiNameIcon.tintColor = .label
         } else {
             self.poiName = poiName
-            poiNameLabel.text = self.poiName
-            poiNameLabel.textColor = bluedColor
-            poiNameIcon.tintColor = bluedColor
         }
+        updatePOINameUI()
     }
 }
 

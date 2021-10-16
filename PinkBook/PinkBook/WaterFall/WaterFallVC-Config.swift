@@ -16,8 +16,8 @@ extension WaterFallVC {
         layout.sectionInset = UIEdgeInsets(top: 0, left: kWaterFallPadding, bottom: kWaterFallPadding, right: kWaterFallPadding)
         layout.itemRenderDirection = .shortestFirst
         
-        if isDraftNote {
-            layout.sectionInset = UIEdgeInsets(top: 44, left: kWaterFallPadding, bottom: kWaterFallPadding, right: kWaterFallPadding)
-        }
+        //if isDraftNote {
+        //    layout.sectionInset = UIEdgeInsets(top: 44, left: kWaterFallPadding, bottom: kWaterFallPadding, right: kWaterFallPadding)
+        //}
     }
 }
