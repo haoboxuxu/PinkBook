@@ -17,4 +17,17 @@ extension NoteEditVC {
             return
         }
     }
+    
+    func handleTFEditChanged() {
+        guard titleTextField.markedTextRange == nil else { return }
+        if titleTextField.unwrappedText.count > kMaxNoteTitleCount {
+            titleTextField.text = String(titleTextField.unwrappedText.prefix(kMaxNoteTitleCount))
+            
+            DispatchQueue.main.async {
+                let end = self.titleTextField.endOfDocument
+                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
+            }
+        }
+        titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
+    }
 }

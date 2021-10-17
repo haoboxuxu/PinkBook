@@ -12,6 +12,7 @@ import CoreLocation
 class NoteEditVC: UIViewController {
     
     var draftNote: DraftNote?
+    var updateDraftNoteFinished: (() -> ())?
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var titleCountLabel: UILabel!
@@ -60,16 +61,7 @@ class NoteEditVC: UIViewController {
         //hide keyboard
     }
     @IBAction func tfDditChanged(_ sender: Any) {
-        guard titleTextField.markedTextRange == nil else { return }
-        if titleTextField.unwrappedText.count > kMaxNoteTitleCount {
-            titleTextField.text = String(titleTextField.unwrappedText.prefix(kMaxNoteTitleCount))
-            
-            DispatchQueue.main.async {
-                let end = self.titleTextField.endOfDocument
-                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
-            }
-        }
-        titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
+        handleTFEditChanged()
     }
     
     
@@ -77,33 +69,11 @@ class NoteEditVC: UIViewController {
         
         validateNote()
         
-        let draftNote = DraftNote(context: context)
-        
-        if isVideo {
-            draftNote.video = try? Data(contentsOf: videoUrl!)
+        if let draftNote = draftNote {
+            updateDraftNote(draftNote)
+        } else {
+            createDraftNote()
         }
-        
-        draftNote.coverPhoto = photos[0].jpeg(.high)
-        
-        var photos: [Data] = []
-        for photo in self.photos {
-            if let pngData = photo.pngData() {
-                photos.append(pngData)
-            }
-        }
-        
-        draftNote.photos = try? JSONEncoder().encode(photos)
-        
-        draftNote.isVideo = isVideo
-        draftNote.title = titleTextField.exactText
-        draftNote.text = textView.exactText
-        draftNote.channel = channel
-        draftNote.subChannel = subChannel
-        draftNote.poiName = poiName
-        draftNote.updatedAt = Date()
-        
-        
-        appDelegate.saveContext()
     }
     
     @IBAction func postNote(_ sender: Any) {

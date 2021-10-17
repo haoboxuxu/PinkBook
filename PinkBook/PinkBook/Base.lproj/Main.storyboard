@@ -645,10 +645,10 @@
             </objects>
             <point key="canvasLocation" x="2438" y="-1238"/>
         </scene>
-        <!--View Controller-->
+        <!--MeVC-->
         <scene sceneID="PAZ-Uc-BMr">
             <objects>
-                <viewController id="1yE-k5-BUh" sceneMemberID="viewController">
+                <viewController id="1yE-k5-BUh" customClass="MeVC" customModule="PinkBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAh-oe-nMO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

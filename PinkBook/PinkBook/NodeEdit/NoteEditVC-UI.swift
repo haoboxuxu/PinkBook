@@ -11,7 +11,9 @@ extension NoteEditVC {
     func setUI() {
         setDraftNoteEditUI()
     }
-    
+}
+
+extension NoteEditVC {
     private func setDraftNoteEditUI() {
         if let draftNote = draftNote {
             titleTextField.text = draftNote.title

@@ -19,5 +19,10 @@ extension WaterFallVC {
         //if isDraftNote {
         //    layout.sectionInset = UIEdgeInsets(top: 44, left: kWaterFallPadding, bottom: kWaterFallPadding, right: kWaterFallPadding)
         //}
+        
+        if isDraftNote {
+            navigationItem.title = "本地草稿"
+            
+        }
     }
 }

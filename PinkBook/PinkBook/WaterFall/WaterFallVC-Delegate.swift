@@ -22,6 +22,10 @@ extension WaterFallVC {
                 noteEditVC.draftNote = draftNote
                 noteEditVC.photos = photos
                 noteEditVC.videoUrl = videoUrl
+                noteEditVC.updateDraftNoteFinished = {
+                    self.getDraftNotes()
+                    self.collectionView.reloadData()
+                }
                 
                 navigationController?.pushViewController(noteEditVC, animated: true)
                 

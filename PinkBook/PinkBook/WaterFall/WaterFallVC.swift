@@ -29,6 +29,7 @@ class WaterFallVC: UICollectionViewController {
 
 // MARK: - CHTCollectionViewDelegateWaterfallLayout
 extension WaterFallVC: CHTCollectionViewDelegateWaterfallLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellW = (screenRect.height - kWaterFallPadding * 3) / 2
         var cellH: CGFloat = 0
@@ -46,7 +47,6 @@ extension WaterFallVC: CHTCollectionViewDelegateWaterfallLayout {
         
         return CGSize(width: cellW, height: cellH)
     }
-    
     
 }
 
