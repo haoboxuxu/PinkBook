@@ -15,8 +15,16 @@ extension WaterFallVC {
         let sortDescriptor1 = NSSortDescriptor(key: "updatedAt", ascending: false)
         request.sortDescriptors = [sortDescriptor1]
         
-        let draftNotes = try! context.fetch(request)
+        showLoadHUD()
+        backgroundContext.perform {
+            if let draftNotes = try? backgroundContext.fetch(request) {
+                self.draftNotes = draftNotes
+            }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+            self.hideLoadHUD()
+        }
         
-        self.draftNotes = draftNotes
     }
 }

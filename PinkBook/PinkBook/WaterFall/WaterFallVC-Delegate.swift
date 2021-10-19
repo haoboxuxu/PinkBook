@@ -24,7 +24,6 @@ extension WaterFallVC {
                 noteEditVC.videoUrl = videoUrl
                 noteEditVC.updateDraftNoteFinished = {
                     self.getDraftNotes()
-                    self.collectionView.reloadData()
                 }
                 
                 navigationController?.pushViewController(noteEditVC, animated: true)

@@ -7,26 +7,37 @@
 
 extension NoteEditVC {
     func createDraftNote() {
-        let draftNote = DraftNote(context: context)
-        
-        if isVideo {
-            draftNote.video = try? Data(contentsOf: videoUrl!)
+        backgroundContext.perform {
+            let draftNote = DraftNote(context: backgroundContext)
+            
+            if self.isVideo {
+                draftNote.video = try? Data(contentsOf: self.videoUrl!)
+            }
+            
+            draftNote.coverPhoto = self.photos[0].jpeg(.high)
+            
+            self.handlePhotos(draftNote)
+            
+            draftNote.isVideo = self.isVideo
+            self.handleOthers(draftNote)
+            
+            DispatchQueue.main.async {
+                self.showTextHUD("保存草稿成功")
+            }
         }
-        
-        draftNote.coverPhoto = photos[0].jpeg(.high)
-        
-        handlePhotos(draftNote)
-        
-        draftNote.isVideo = isVideo
-        handleOthers(draftNote)
     }
     
     func updateDraftNote(_ draftNote: DraftNote) {
-        if !isVideo {
-            handlePhotos(draftNote)
+        backgroundContext.perform {
+            if !self.isVideo {
+                self.handlePhotos(draftNote)
+            }
+            self.handleOthers(draftNote)
+            
+            DispatchQueue.main.async {
+                self.updateDraftNoteFinished?()
+            }
         }
-        handleOthers(draftNote)
-        updateDraftNoteFinished?()
         navigationController?.popViewController(animated: true)
     }
 }
@@ -37,8 +48,8 @@ extension NoteEditVC {
         draftNote.coverPhoto = photos[0].jpeg(.high)
         
         var photos: [Data] = []
-        for photo in self.photos {
-            if let pngData = photo.pngData() {
+        for photo in self.photos{
+            if let pngData = photo.pngData(){
                 photos.append(pngData)
             }
         }
@@ -47,13 +58,16 @@ extension NoteEditVC {
     }
     
     private func handleOthers(_ draftNote: DraftNote) {
-        draftNote.title = titleTextField.exactText
-        draftNote.text = textView.exactText
+        
+        DispatchQueue.main.async {
+            draftNote.title = self.titleTextField.exactText
+            draftNote.text = self.textView.exactText
+        }
         draftNote.channel = channel
         draftNote.subChannel = subChannel
         draftNote.poiName = poiName
         draftNote.updatedAt = Date()
         
-        appDelegate.saveContext()
+        appDelegate.saveBackgroundContext()
     }
 }
