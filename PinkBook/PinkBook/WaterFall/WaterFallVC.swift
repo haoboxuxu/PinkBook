@@ -19,9 +19,7 @@ class WaterFallVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         config()
-        
         getDraftNotes()
     }
 

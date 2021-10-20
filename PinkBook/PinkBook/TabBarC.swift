@@ -30,6 +30,7 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.screens = [.library, .video, .photo]
             config.preferredStatusBarStyle = UIStatusBarStyle.default
             config.maxCameraZoomFactor = kMaxCameraZoomFactor
+            config.showsVideoTrimmer = false
             
             // MARK: 相册配置
             config.library.defaultMultipleSelection = true
@@ -44,22 +45,30 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             
             picker.didFinishPicking { [unowned picker] items, cancelled in
                 if cancelled {
-                    print("Picker was canceled")
-                }
-                
-                for item in items {
-                    switch item {
-                    case let .photo(photo):
-                        print(photo)
-                    case let .video(video):
-                        print(video)
+                    picker.dismiss(animated: true)
+                } else {
+                    var photos: [UIImage] = []
+                    var videoUrl: URL?
+                    
+                    for item in items {
+                        switch item {
+                        case let .photo(photo):
+                            photos.append(photo.image)
+                        case .video:
+                            let url = URL(fileURLWithPath: "recordedVideoRAW.mov", relativeTo: FileManager.default.temporaryDirectory)
+                            photos.append(url.thumbnail)
+                            //videoUrl = video.url
+                            videoUrl = url
+                        }
                     }
+                    
+                    let noteEditVC = self.storyboard?.instantiateViewController(withIdentifier: kNoteEditVCID) as! NoteEditVC
+                    noteEditVC.photos = photos
+                    noteEditVC.videoUrl = videoUrl
+                    picker.pushViewController(noteEditVC, animated: true)
                 }
-                
-                picker.dismiss(animated: true)
             }
             present(picker, animated: true)
-
             
             return false
         }

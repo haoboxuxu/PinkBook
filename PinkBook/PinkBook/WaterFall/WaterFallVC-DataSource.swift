@@ -51,7 +51,7 @@ extension WaterFallVC {
 
 extension WaterFallVC {
     private func deleteDraftNote(_ index: Int){
-        //backgroundContext.perform {
+        backgroundContext.perform {
             let draftNote = self.draftNotes[index]
             //数据1:本地CoreData里的
             backgroundContext.delete(draftNote)
@@ -65,7 +65,7 @@ extension WaterFallVC {
                 self.collectionView.reloadData()
                 self.showTextHUD("删除草稿成功")
             }
-        //}
+        }
     }
 }
 

@@ -8,6 +8,7 @@
 import UIKit
 import MBProgressHUD
 import DateToolsSwift
+import AVFoundation
 
 extension String {
     var isBlank: Bool {
@@ -42,8 +43,23 @@ extension Date {
     }
 }
 
+extension URL{
+    var thumbnail: UIImage {
+        let asset = AVAsset(url: self)
+        let assetImgGenerate = AVAssetImageGenerator(asset: asset)
+        assetImgGenerate.appliesPreferredTrackTransform = true
+        let time = CMTimeMakeWithSeconds(1.0, preferredTimescale: 600)
+        do {
+            let img = try assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+            let thumbnail = UIImage(cgImage: img)
+            return thumbnail
+        } catch {
+            return imagePH
+        }
+    }
+}
+
 extension UIImage {
-    
     convenience init?(_ data: Data?) {
         if let unwrappedData = data {
             self.init(data: unwrappedData)
@@ -100,12 +116,16 @@ extension UIViewController {
     }
     
     // MARK: 提示
-    func showTextHUD(_ title: String, _ subTitle: String? = nil) {
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+    func showTextHUD(_ title: String, _ inCurrentView: Bool = true, _ subTitle: String? = nil){
+        var viewToShow = view!
+        if !inCurrentView {
+            viewToShow = UIApplication.shared.windows.last!
+        }
+        let hud = MBProgressHUD.showAdded(to: viewToShow, animated: true)
         hud.mode = .text
         hud.label.text = title
         hud.detailsLabel.text = subTitle
-        hud.hide(animated: true, afterDelay: 2.0)
+        hud.hide(animated: true, afterDelay: 2)
     }
     
     func hideLoadHUD() {
