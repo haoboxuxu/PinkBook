@@ -13,5 +13,6 @@
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "MJRefresh.h"
+#import "JVERIFICATIONService.h"
 
 #endif /* Bridging_Header_h */

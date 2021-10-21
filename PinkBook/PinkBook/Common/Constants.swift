@@ -69,3 +69,6 @@ let kPOITypes = "汽车服务|汽车销售|汽车维修|摩托车服务|餐饮�
 let kPOIsInitArr = [["不显示位置", ""]]
 let kPOIoffset = 20
 
+// MARK: key
+let kJappKey = "62e763e9ad535f7ec0e49858"
+let kAmapKey = "089769c8acc41d92c98edc556dda79b9"

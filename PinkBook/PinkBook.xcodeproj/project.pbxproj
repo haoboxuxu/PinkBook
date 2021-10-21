@@ -39,6 +39,8 @@
 		D89EBFBE271C49EE00D4222B /* NoteEditVC-DraftNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EBFBD271C49EE00D4222B /* NoteEditVC-DraftNote.swift */; };
 		D89EBFC0271C511000D4222B /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EBFBF271C511000D4222B /* MeVC.swift */; };
 		D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B12389270EE8D9005D706C /* NoteEditVC-Config.swift */; };
+		D8B518E6272183C500A61C6D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B518E5272183C500A61C6D /* LoginVC.swift */; };
+		D8B518E8272184AD00A61C6D /* LoginVC-LocalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B518E7272184AD00A61C6D /* LoginVC-LocalLogin.swift */; };
 		D8BD5FD92708A26000D88A95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FD72708A26000D88A95 /* Localizable.strings */; };
 		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
 		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
@@ -93,6 +95,8 @@
 		D89EBFBD271C49EE00D4222B /* NoteEditVC-DraftNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DraftNote.swift"; sourceTree = "<group>"; };
 		D89EBFBF271C511000D4222B /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		D8B12389270EE8D9005D706C /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
+		D8B518E5272183C500A61C6D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D8B518E7272184AD00A61C6D /* LoginVC-LocalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC-LocalLogin.swift"; sourceTree = "<group>"; };
 		D8BD5FD1270848D000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		D8BD5FD82708A26000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 				D81067002705F6D100AB7BC9 /* Main.storyboard */,
 				D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */,
 				D89EBFBF271C511000D4222B /* MeVC.swift */,
+				D8B518E4272183AA00A61C6D /* Login */,
 				D80C832B270C4EBC004E515B /* NodeEdit */,
 				D804EB382708455E0036FE7B /* WaterFall */,
 				D810671A2707014300AB7BC9 /* Home */,
@@ -240,6 +245,15 @@
 				D8BD5FE22708AC5000D88A95 /* PostVC.swift */,
 			);
 			path = "Demo+PH";
+			sourceTree = "<group>";
+		};
+		D8B518E4272183AA00A61C6D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D8B518E5272183C500A61C6D /* LoginVC.swift */,
+				D8B518E7272184AD00A61C6D /* LoginVC-LocalLogin.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D8BD5FDF2708A5AD00D88A95 /* Resources */ = {
@@ -398,11 +412,13 @@
 				D89EBFBE271C49EE00D4222B /* NoteEditVC-DraftNote.swift in Sources */,
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
 				D81067192707004200AB7BC9 /* Constants.swift in Sources */,
+				D8B518E8272184AD00A61C6D /* LoginVC-LocalLogin.swift in Sources */,
 				D89EBFC0271C511000D4222B /* MeVC.swift in Sources */,
 				D81066FB2705F6D100AB7BC9 /* AppDelegate.swift in Sources */,
 				D87C2100271B217700E1C27E /* NoteEditVC-UI.swift in Sources */,
 				D80C8326270C21F1004E515B /* NoteEditVC.swift in Sources */,
 				D81066FD2705F6D100AB7BC9 /* SceneDelegate.swift in Sources */,
+				D8B518E6272183C500A61C6D /* LoginVC.swift in Sources */,
 				D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */,
 				D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */,
 				D8DAC12F27132AFD003F3E8E /* POIVC-Config.swift in Sources */,
