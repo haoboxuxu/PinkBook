@@ -34,13 +34,13 @@
 		D87C2100271B217700E1C27E /* NoteEditVC-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C20FF271B217700E1C27E /* NoteEditVC-UI.swift */; };
 		D87C60A627074E1D00256ED3 /* WaterFallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A527074E1D00256ED3 /* WaterFallVC.swift */; };
 		D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87C60A72707518400256ED3 /* WaterFallCell.swift */; };
-		D88101B3270980EB00CD9381 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88101B2270980EB00CD9381 /* Extensions.swift */; };
+		D88101B3270980EB00CD9381 /* Systems-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88101B2270980EB00CD9381 /* Systems-Extensions.swift */; };
 		D8869B6A270D9088002A4AE2 /* rickroll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8869B69270D8FF2002A4AE2 /* rickroll.mp4 */; };
 		D89EBFBE271C49EE00D4222B /* NoteEditVC-DraftNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EBFBD271C49EE00D4222B /* NoteEditVC-DraftNote.swift */; };
 		D89EBFC0271C511000D4222B /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89EBFBF271C511000D4222B /* MeVC.swift */; };
 		D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B12389270EE8D9005D706C /* NoteEditVC-Config.swift */; };
 		D8B518E6272183C500A61C6D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B518E5272183C500A61C6D /* LoginVC.swift */; };
-		D8B518E8272184AD00A61C6D /* LoginVC-LocalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B518E7272184AD00A61C6D /* LoginVC-LocalLogin.swift */; };
+		D8B518E8272184AD00A61C6D /* Login-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B518E7272184AD00A61C6D /* Login-Extension.swift */; };
 		D8BD5FD92708A26000D88A95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FD72708A26000D88A95 /* Localizable.strings */; };
 		D8BD5FDC2708A4AA00D88A95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8BD5FDE2708A4AA00D88A95 /* InfoPlist.strings */; };
 		D8BD5FE12708AB6F00D88A95 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD5FE02708AB6F00D88A95 /* TabBarC.swift */; };
@@ -90,13 +90,13 @@
 		D87C20FF271B217700E1C27E /* NoteEditVC-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-UI.swift"; sourceTree = "<group>"; };
 		D87C60A527074E1D00256ED3 /* WaterFallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallVC.swift; sourceTree = "<group>"; };
 		D87C60A72707518400256ED3 /* WaterFallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallCell.swift; sourceTree = "<group>"; };
-		D88101B2270980EB00CD9381 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D88101B2270980EB00CD9381 /* Systems-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Systems-Extensions.swift"; sourceTree = "<group>"; };
 		D8869B69270D8FF2002A4AE2 /* rickroll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rickroll.mp4; sourceTree = "<group>"; };
 		D89EBFBD271C49EE00D4222B /* NoteEditVC-DraftNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DraftNote.swift"; sourceTree = "<group>"; };
 		D89EBFBF271C511000D4222B /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		D8B12389270EE8D9005D706C /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
 		D8B518E5272183C500A61C6D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		D8B518E7272184AD00A61C6D /* LoginVC-LocalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC-LocalLogin.swift"; sourceTree = "<group>"; };
+		D8B518E7272184AD00A61C6D /* Login-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Extension.swift"; sourceTree = "<group>"; };
 		D8BD5FD1270848D000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		D8BD5FD82708A26000D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D8BD5FDD2708A4AA00D88A95 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -135,6 +135,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D8003FDE2729AD0500B23F26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D88101B2270980EB00CD9381 /* Systems-Extensions.swift */,
+				D8B518E7272184AD00A61C6D /* Login-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D804EB382708455E0036FE7B /* WaterFall */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +161,8 @@
 		D804EB39270845700036FE7B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D8003FDE2729AD0500B23F26 /* Extensions */,
 				D81067182707004200AB7BC9 /* Constants.swift */,
-				D88101B2270980EB00CD9381 /* Extensions.swift */,
 				D8ECC9E72710380F00153FEE /* Protocols.swift */,
 			);
 			path = Common;
@@ -251,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				D8B518E5272183C500A61C6D /* LoginVC.swift */,
-				D8B518E7272184AD00A61C6D /* LoginVC-LocalLogin.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -412,7 +420,7 @@
 				D89EBFBE271C49EE00D4222B /* NoteEditVC-DraftNote.swift in Sources */,
 				D81067132706FF6900AB7BC9 /* FollowVC.swift in Sources */,
 				D81067192707004200AB7BC9 /* Constants.swift in Sources */,
-				D8B518E8272184AD00A61C6D /* LoginVC-LocalLogin.swift in Sources */,
+				D8B518E8272184AD00A61C6D /* Login-Extension.swift in Sources */,
 				D89EBFC0271C511000D4222B /* MeVC.swift in Sources */,
 				D81066FB2705F6D100AB7BC9 /* AppDelegate.swift in Sources */,
 				D87C2100271B217700E1C27E /* NoteEditVC-UI.swift in Sources */,
@@ -422,7 +430,7 @@
 				D8B1238A270EE8D9005D706C /* NoteEditVC-Config.swift in Sources */,
 				D863D912270DC1A700E38644 /* NoteEditVC-DragDrop.swift in Sources */,
 				D8DAC12F27132AFD003F3E8E /* POIVC-Config.swift in Sources */,
-				D88101B3270980EB00CD9381 /* Extensions.swift in Sources */,
+				D88101B3270980EB00CD9381 /* Systems-Extensions.swift in Sources */,
 				D8D70D64271813AC000751E6 /* WaterFallVC-LoadData.swift in Sources */,
 				D8D70D66271818FA000751E6 /* WaterFallVC-Config.swift in Sources */,
 				D8ECC9E62710322100153FEE /* ChannelTabelVC.swift in Sources */,
@@ -606,6 +614,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PinkBook;
@@ -639,6 +648,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V32BKVPBTJ;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PinkBook/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PinkBook;
