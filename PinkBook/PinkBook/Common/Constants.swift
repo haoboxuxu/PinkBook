@@ -14,6 +14,7 @@ let kDiscoveryVCID = "DiscoveryVCID"
 let kWaterFallVCID = "WaterFallVCID"
 let kNoteEditVCID = "NoteEditVCID"
 let kChannelTabelVCID = "ChannelTabelVCID"
+let kLoginNavID = "LoginNavID"
 
 // MARK: Cell
 let kWaterFallCellID = "WaterFallCellID"

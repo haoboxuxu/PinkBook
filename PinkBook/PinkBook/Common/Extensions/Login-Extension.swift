@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 extension UIViewController {
     @objc func localLogin() {
@@ -26,11 +27,13 @@ extension UIViewController {
                     } else {
                         //不可预取号
                         //print("预取号失败，错误码 \(result!["code"]), 错误描述 \(result!["content"])")
+                        self.presentCodeLoginVC()
                     }
                 }
             } else {
                 self.hideLoadHUD()
                 print("一键登录初始化失败")
+                //self.presentCodeLoginVC()
             }
         }
         JVERIFICATIONService.setup(with: config)
@@ -38,10 +41,13 @@ extension UIViewController {
     
     private func presentLocalLoginVC() {
         JVERIFICATIONService.getAuthorizationWith(self, hide: true, animated: true, timeout: 5*1000, completion: { (result) in
-            if let result = result, let _ = result["loginToken"] {
+            if let result = result, let loginToken = result["loginToken"] as? String {
                 JVERIFICATIONService.clearPreLoginCache()
+                print("loginToken = \(loginToken)")
+                self.getEncryptedPhontNum(loginToken)
             } else {
                 print("一键登录失败了")
+                self.otherLogin()
             }
         }) { (type, content) in
             if let content = content {
@@ -53,13 +59,25 @@ extension UIViewController {
 
 extension UIViewController {
     @objc private func otherLogin() {
-        print("xxx")
+        JVERIFICATIONService.dismissLoginController(animated: true) {
+            self.presentCodeLoginVC()
+        }
     }
     
     @objc private func dismissLocalLoginVC() {
         JVERIFICATIONService.dismissLoginController(animated: true, completion: nil)
     }
 }
+
+extension UIViewController {
+    private func presentCodeLoginVC() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginNavC = mainStoryboard.instantiateViewController(identifier: kLoginNavID)
+        loginNavC.modalPresentationStyle = .fullScreen
+        present(loginNavC, animated: true)
+    }
+}
+
 extension UIViewController {
     private func setLocalLoginUI() {
         let config = JVUIConfig()
@@ -121,6 +139,33 @@ extension UIViewController {
                 otherLoginBtn.centerYAnchor.constraint(equalTo: customView.centerYAnchor, constant: 170),
                 otherLoginBtn.widthAnchor.constraint(equalToConstant: 279)
             ])
+        }
+    }
+}
+
+extension UIViewController {
+    
+    struct LocalLoginRes: Decodable {
+        let phone: String
+    }
+    
+    private func getEncryptedPhontNum(_ loginToken: String) {
+        let headers: HTTPHeaders = [
+            .authorization(username: "62e763e9ad535f7ec0e49858", password: "ccf97fdc9e56d5aeebef8f0e")
+        ]
+        
+        let parameters = ["loginToken" : loginToken]
+        
+        AF.request(
+            "https://api.verification.jpush.cn/v1/web/loginTokenVerify",
+            method: .post,
+            parameters: parameters,
+            encoder: JSONParameterEncoder.default,
+            headers: headers
+        ).responseDecodable(of: LocalLoginRes.self) { response in
+            if let localLoginRes = response.value {
+                print("localLoginRes.phone = \(localLoginRes.phone)")
+            }
         }
     }
 }
