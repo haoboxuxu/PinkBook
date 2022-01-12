@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AMapFoundationKit/AMapServices.h>
 #import "AMapLocationCommonObj.h"
 #import "AMapLocationRegionObj.h"
 
@@ -141,6 +142,19 @@ typedef void (^AMapLocatingCompletionBlock)(CLLocation *location, AMapLocationRe
  *  @param region 要查询的region
  */
 - (void)requestStateForRegion:(AMapLocationRegion *)region __attribute__((deprecated("请使用AMapGeoFenceManager")));
+
+#pragma mark - Privacy 隐私合规
+/**
+ * @brief 更新App是否显示隐私弹窗的状态，隐私弹窗是否包含高德SDK隐私协议内容的状态，注意：必须在AMapLocationManager实例化之前调用. since 2.8.0
+ * @param showStatus 隐私弹窗状态
+ * @param containStatus 包含高德SDK隐私协议状态
+ */
++ (void)updatePrivacyShow:(AMapPrivacyShowStatus)showStatus privacyInfo:(AMapPrivacyInfoStatus)containStatus;
+/**
+* @brief 更新用户授权高德SDK隐私协议状态，注意：必须在AMapLocationManager实例化之前调用. since 2.8.0
+* @param agreeStatus 用户授权高德SDK隐私协议状态
+*/
++ (void)updatePrivacyAgree:(AMapPrivacyAgreeStatus)agreeStatus;
 
 @end
 

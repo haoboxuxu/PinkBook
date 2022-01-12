@@ -31,7 +31,11 @@ extension NoteEditVC {
         textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
         
         locationManager.requestWhenInUseAuthorization()
-        
+        //隐私合规
+        AMapLocationManager.updatePrivacyShow(.didShow, privacyInfo: AMapPrivacyInfoStatus.didContain)
+        AMapLocationManager.updatePrivacyAgree(AMapPrivacyAgreeStatus.didAgree)
+        AMapSearchAPI.updatePrivacyShow(.didShow, privacyInfo: AMapPrivacyInfoStatus.didContain)
+        AMapSearchAPI.updatePrivacyAgree(AMapPrivacyAgreeStatus.didAgree)
         
         print("NSHomeDirectory\(NSHomeDirectory())")
     }

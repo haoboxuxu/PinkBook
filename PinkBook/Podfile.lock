@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (5.4.4)
-  - AMapFoundation (1.6.8)
-  - AMapLocation (2.7.0):
-    - AMapFoundation (~> 1.6.8)
-  - AMapSearch (7.9.0):
-    - AMapFoundation (~> 1.6.6)
+  - AMapFoundation (1.6.9)
+  - AMapLocation (2.8.0):
+    - AMapFoundation (~> 1.6.9)
+  - AMapSearch (8.1.0):
+    - AMapFoundation (~> 1.6.9)
   - CHTCollectionViewWaterfallLayout/Swift (0.9.8)
   - DateToolsSwift (5.0.0)
   - JCore (2.7.1)
@@ -12,7 +12,7 @@ PODS:
     - JCore (< 6.0.0, >= 2.1.6)
   - KMPlaceholderTextView (1.4.0)
   - MBProgressHUD (1.2.0)
-  - MJRefresh (3.7.2)
+  - MJRefresh (3.7.5)
   - PryntTrimmerView (4.0.2)
   - SKPhotoBrowser (7.0.0)
   - SteviaLayout (4.7.3)
@@ -56,16 +56,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  AMapFoundation: 32e9a0264ee62f5aa2aaf82bdafdda7985ce09c7
-  AMapLocation: 720eb034995c6198d480f8f7bbd714bb08bb9ef7
-  AMapSearch: 94cff5f6ab7233c1639111e486861ac2acea6d4b
+  AMapFoundation: 8d8ecbb0b2e9ce5487995360d26c885d94642bfd
+  AMapLocation: 5ef44a1117be7dc541cb7a7d43d03c5ee91e4387
+  AMapSearch: 5c1cc07429f04b9cc76438fcb2411c66fdbbb178
   CHTCollectionViewWaterfallLayout: 5f241d2480ab4939aa0d1ad4981de9eef1fbe60d
   DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   JCore: 9d5bda3a172c65bbe14f2806ab0f6246f8a06065
   JVerification: 2502ca38c9523acdc4b15320f267e53ef94aa938
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SKPhotoBrowser: 6aaa8f232752e87c7e76bace183bead0a137097d
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4

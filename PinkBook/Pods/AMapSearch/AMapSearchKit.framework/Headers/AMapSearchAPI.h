@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AMapSearchObj.h"
 #import "AMapCommonObj.h"
+#import <AMapFoundationKit/AMapServices.h>
 
 @protocol AMapSearchDelegate;
 
@@ -39,6 +40,20 @@
  * @brief 取消所有未回调的请求，触发错误回调。
  */
 - (void)cancelAllRequests;
+
+#pragma mark - Privacy 隐私合规
+/**
+ * @brief 更新App是否显示隐私弹窗的状态，隐私弹窗是否包含高德SDK隐私协议内容的状态. since 8.1.0
+ * @param showStatus 隐私弹窗状态
+ * @param containStatus 包含高德SDK隐私协议状态
+ */
++ (void)updatePrivacyShow:(AMapPrivacyShowStatus)showStatus privacyInfo:(AMapPrivacyInfoStatus)containStatus;
+/**
+* @brief 更新用户授权高德SDK隐私协议状态. since 8.1.0
+* @param agreeStatus 用户授权高德SDK隐私协议状态
+*/
++ (void)updatePrivacyAgree:(AMapPrivacyAgreeStatus)agreeStatus;
+
 
 #pragma mark - 搜索服务接口
 

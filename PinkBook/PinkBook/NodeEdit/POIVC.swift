@@ -38,7 +38,6 @@ class POIVC: UIViewController {
     
     lazy var footer = MJRefreshAutoNormalFooter()
     
-    
     var pois = kPOIsInitArr //[Array(repeating: "", count: 2)]
     var aroundSearchPois = kPOIsInitArr
     
