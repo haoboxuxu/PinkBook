@@ -7,3 +7,5 @@ PinkBook project
 
 [支付宝密钥工具](https://opendocs.alipay.com/open/291/introduce)
 
+[支付宝开放平台登陆](https://open.alipay.com)
+
