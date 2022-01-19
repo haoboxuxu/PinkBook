@@ -24,6 +24,7 @@
 		D81067152706FF7900AB7BC9 /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81067142706FF7900AB7BC9 /* DiscoveryVC.swift */; };
 		D81067172706FF8400AB7BC9 /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81067162706FF8400AB7BC9 /* NearByVC.swift */; };
 		D81067192707004200AB7BC9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81067182707004200AB7BC9 /* Constants.swift */; };
+		D812689927985E5F00384B27 /* SocailLoginVC-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D812689827985E5F00384B27 /* SocailLoginVC-Apple.swift */; };
 		D823FC27270F20E900CD9871 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D823FC26270F20E900CD9871 /* TextViewIAView.xib */; };
 		D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823FC28270F212E00CD9871 /* TextViewIAView.swift */; };
 		D828D83127117D910004E2F0 /* POICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828D83027117D910004E2F0 /* POICell.swift */; };
@@ -86,6 +87,8 @@
 		D81067142706FF7900AB7BC9 /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		D81067162706FF8400AB7BC9 /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		D81067182707004200AB7BC9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D812689727985C9700384B27 /* PinkBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PinkBook.entitlements; sourceTree = "<group>"; };
+		D812689827985E5F00384B27 /* SocailLoginVC-Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocailLoginVC-Apple.swift"; sourceTree = "<group>"; };
 		D823FC26270F20E900CD9871 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		D823FC28270F212E00CD9871 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		D828D83027117D910004E2F0 /* POICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POICell.swift; sourceTree = "<group>"; };
@@ -310,6 +313,7 @@
 		D81066F92705F6D100AB7BC9 /* PinkBook */ = {
 			isa = PBXGroup;
 			children = (
+				D812689727985C9700384B27 /* PinkBook.entitlements */,
 				D81066FA2705F6D100AB7BC9 /* AppDelegate.swift */,
 				D81066FC2705F6D100AB7BC9 /* SceneDelegate.swift */,
 				D81067002705F6D100AB7BC9 /* Main.storyboard */,
@@ -460,6 +464,7 @@
 			children = (
 				D8B518E5272183C500A61C6D /* LoginVC.swift */,
 				D8932950278F303B00C39D77 /* SocailLoginVC.swift */,
+				D812689827985E5F00384B27 /* SocailLoginVC-Apple.swift */,
 				D8932952278F305F00C39D77 /* SocailLoginVC-Alipay.swift */,
 			);
 			path = Login;
@@ -663,6 +668,7 @@
 				D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */,
 				D8031CF4271973B900405232 /* WaterFallVC-Delegate.swift in Sources */,
 				D87C60A82707518400256ED3 /* WaterFallCell.swift in Sources */,
+				D812689927985E5F00384B27 /* SocailLoginVC-Apple.swift in Sources */,
 				D8BD5FE32708AC5000D88A95 /* PostVC.swift in Sources */,
 				D80C832A270C493B004E515B /* PhotoFooter.swift in Sources */,
 				D8F5C052271715B80004BAB1 /* DraftNoteWaterFallCell.swift in Sources */,
@@ -835,6 +841,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PinkBook/PinkBook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -897,6 +904,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PinkBook/PinkBook.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

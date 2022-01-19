@@ -29,6 +29,10 @@ let mainColor = UIColor(named: "main")!
 let bluedColor = UIColor(named: "blued")!
 let imagePH = UIImage(named: "imagePH")!
 
+// MARK: Userdefaults
+let kNameFromAppleID = "NameFromAppleID"
+let kEmailFromAppleID = "EmailFromAppleID"
+
 // MARK: CoreData
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let persistentContainer = appDelegate.persistentContainer

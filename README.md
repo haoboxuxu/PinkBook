@@ -9,3 +9,4 @@ PinkBook project
 
 [支付宝开放平台登陆](https://open.alipay.com)
 
+[Sign in with Apple](https://developer.apple.com/design/resources/)

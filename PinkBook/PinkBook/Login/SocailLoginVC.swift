@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 class SocailLoginVC: UIViewController {
 
@@ -19,4 +20,17 @@ class SocailLoginVC: UIViewController {
     @IBAction func signInWithAlipay(_ sender: Any) {
         signInWithAlipay()
     }
+    
+    
+    @IBAction func signInWithApple(_ sender: Any) {
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.email, .fullName]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
+    }
 }
+
