@@ -26,6 +26,7 @@ let kDraftNoteWaterFallCellID = "DraftNoteWaterFallCellID"
 
 // MARK: Assets
 let mainColor = UIColor(named: "main")!
+let mainLightColor = UIColor(named: "main-light")!
 let bluedColor = UIColor(named: "blued")!
 let imagePH = UIImage(named: "imagePH")!
 
@@ -81,3 +82,9 @@ let kAlipayAppID = _private_kAlipayAppID
 let kAlipayPID = _private_kAlipayPID
 let kAlipayPrivateKey = _private_kAlipayPrivateKey //私钥
 let kAppScheme = "PinkBook"
+let kLCAppID = _kLCAppID //leancloud
+let kLCAppKey = _kLCAppKey //leancloud
+let kLCServerURL = _kLCServerURL //leancloud
+
+// regular
+let kPhoneRegEx = "^1\\d{10}$"

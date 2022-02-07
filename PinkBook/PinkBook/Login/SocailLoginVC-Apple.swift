@@ -57,3 +57,23 @@ extension SocailLoginVC: ASAuthorizationControllerPresentationContextProviding {
         view.window!
     }
 }
+
+extension SocailLoginVC {
+    func checkSignInWithAppleState(with userID: String) {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        appleIDProvider.getCredentialState(forUserID: userID) { state, error in
+            switch state {
+            case .revoked:
+                print("用户登出或取消")
+            case .authorized:
+                print("展示正常页面")
+            case .notFound:
+                print("无登陆，展示登陆页面")
+            case .transferred:
+                print("")
+            @unknown default:
+                print("")
+            }
+        }
+    }
+}

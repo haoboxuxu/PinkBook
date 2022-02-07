@@ -19,6 +19,7 @@ target 'PinkBook' do
   pod 'JVerification'
   pod 'Alamofire', '~> 5.4'
   pod  'AlipaySDK-iOS'
+  pod 'LeanCloud'
   
 end
 

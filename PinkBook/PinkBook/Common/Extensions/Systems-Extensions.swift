@@ -14,6 +14,25 @@ extension String {
     var isBlank: Bool {
         self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
+    
+    var isPhoneNumber: Bool {
+        return Int(self) != nil && NSRegularExpression(kPhoneRegEx).matches(self)
+    }
+}
+
+extension NSRegularExpression {
+    convenience init(_ pattern: String) {
+        do {
+            try self.init(pattern: pattern)
+        } catch {
+            fatalError("NSRegularExpression init failed, not regular")
+        }
+    }
+    
+    func matches(_ string: String) -> Bool {
+        let range = NSRange(location: 0, length: string.utf16.count)
+        return firstMatch(in: string, options: [], range: range) != nil
+    }
 }
 
 extension Optional where Wrapped == String {
@@ -56,6 +75,18 @@ extension URL{
         } catch {
             return imagePH
         }
+    }
+}
+
+extension UIButton {
+    func setToDisabled() {
+        isEnabled = false
+        backgroundColor = mainLightColor
+    }
+    
+    func setToEnabled() {
+        isEnabled = true
+        backgroundColor = mainColor
     }
 }
 

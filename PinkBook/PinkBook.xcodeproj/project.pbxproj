@@ -63,6 +63,8 @@
 		D8ECC9EA271079A900153FEE /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ECC9E9271079A900153FEE /* POIVC.swift */; };
 		D8F1D3B22715738700CC7542 /* POIVC-KeywordsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */; };
 		D8F5C052271715B80004BAB1 /* DraftNoteWaterFallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F5C051271715B80004BAB1 /* DraftNoteWaterFallCell.swift */; };
+		D8F7D00127B165BE00C7780B /* CodeLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F7D00027B165BE00C7780B /* CodeLoginVC.swift */; };
+		D8F7D00327B165D400C7780B /* PassWordLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F7D00227B165D400C7780B /* PassWordLoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +208,8 @@
 		D8ECC9E9271079A900153FEE /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
 		D8F1D3B12715738700CC7542 /* POIVC-KeywordsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-KeywordsSearch.swift"; sourceTree = "<group>"; };
 		D8F5C051271715B80004BAB1 /* DraftNoteWaterFallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftNoteWaterFallCell.swift; sourceTree = "<group>"; };
+		D8F7D00027B165BE00C7780B /* CodeLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLoginVC.swift; sourceTree = "<group>"; };
+		D8F7D00227B165D400C7780B /* PassWordLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordLoginVC.swift; sourceTree = "<group>"; };
 		E6C3A1573FC6250E3A42D15E /* Pods_PinkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -466,6 +470,8 @@
 				D8932950278F303B00C39D77 /* SocailLoginVC.swift */,
 				D812689827985E5F00384B27 /* SocailLoginVC-Apple.swift */,
 				D8932952278F305F00C39D77 /* SocailLoginVC-Alipay.swift */,
+				D8F7D00027B165BE00C7780B /* CodeLoginVC.swift */,
+				D8F7D00227B165D400C7780B /* PassWordLoginVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				D80C8328270C2D30004E515B /* PhotoCell.swift in Sources */,
 				D87C20FE271B20B800E1C27E /* NoteEditVC-Helper.swift in Sources */,
 				D8932951278F303B00C39D77 /* SocailLoginVC.swift in Sources */,
+				D8F7D00327B165D400C7780B /* PassWordLoginVC.swift in Sources */,
 				D863D914270DCE9F00E38644 /* NoteEditVC-CollectionView.swift in Sources */,
 				D81067152706FF7900AB7BC9 /* DiscoveryVC.swift in Sources */,
 				D8ECC9E82710380F00153FEE /* Protocols.swift in Sources */,
@@ -638,6 +645,7 @@
 				D8932A05279054CE00C39D77 /* openssl_wrapper.m in Sources */,
 				D84D15322716ADFE00956D30 /* PinkBook.xcdatamodeld in Sources */,
 				D8ECC9E42710310100153FEE /* ChannelVC.swift in Sources */,
+				D8F7D00127B165BE00C7780B /* CodeLoginVC.swift in Sources */,
 				D823FC29270F212E00CD9871 /* TextViewIAView.swift in Sources */,
 				D81067112706F81E00AB7BC9 /* HomeVC.swift in Sources */,
 				D8031CF22719703700405232 /* WaterFallVC-DataSource.swift in Sources */,
