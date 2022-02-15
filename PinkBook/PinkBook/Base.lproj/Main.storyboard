@@ -676,16 +676,18 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ok-yW-BHh">
                                                         <rect key="frame" x="0.0" y="0.0" width="102" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="one-time-code"/>
                                                         <connections>
+                                                            <action selector="tfEditingChanged:" destination="aNw-hv-Ttk" eventType="editingChanged" id="0We-E4-gyz"/>
                                                             <outlet property="delegate" destination="aNw-hv-Ttk" id="AS5-wI-pLE"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3L-Hf-mKP">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3L-Hf-mKP">
                                                         <rect key="frame" x="242" y="0.0" width="92" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="获取验证码"/>
+                                                        <state key="normal" title="获取验证码">
+                                                            <color key="titleColor" systemColor="systemBlueColor"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="getAuthCode:" destination="aNw-hv-Ttk" eventType="touchUpInside" id="gej-xq-hy8"/>
                                                         </connections>
@@ -1443,6 +1445,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

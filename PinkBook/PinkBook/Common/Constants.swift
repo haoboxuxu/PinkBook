@@ -88,3 +88,4 @@ let kLCServerURL = _kLCServerURL //leancloud
 
 // regular
 let kPhoneRegEx = "^1\\d{10}$"
+let kAuthCodeRegEx = "^\\d{6}$"
